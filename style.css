@@ -950,3 +950,21 @@ button[type="submit"]:disabled {
     flex-direction: column;
   }
 }
+.form-msg {
+  display:none;
+  margin-top:1rem;
+  padding:1rem;
+  border-radius:4px;
+  text-align:center;
+  font-weight:600;
+}
+.form-msg.success {
+  background:#e7f9ed;
+  border:1px solid #28a745;
+  color:#1c6b2c;
+}
+.form-msg.error {
+  background:#ffecec;
+  border:1px solid #dc3545;
+  color:#842029;
+}
