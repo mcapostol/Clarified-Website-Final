@@ -71,7 +71,9 @@
                     <div>
                         <p> Str. Oltului Nr. 3, Ap 12, Buftea, Ilfov, Romania</p>
                         <p><a href="mailto:office@clarified.ro">office@clarified.ro</a></p>
-                        <p>+40774456127</p>
+                        <p>+40774456127 | 
+                           +40751018695
+                        </p>
                     </div>
                 </div>
 
@@ -88,13 +90,23 @@
 
             <!-- Right Column: Form -->
             <div class="contact-form">
-                <form class="google-form" id="contact-form">
-                    <input type="text" name="entry.845252004" placeholder="Your name" required>
-                    <input type="email" name="entry.1093538046" placeholder="Your email" required>
-                    <input type="text" name="entry.75109367" placeholder="Subject" required>
-                    <textarea name="entry.514430117" placeholder="Your message" required></textarea>
-                    <button type="submit">Trimite</button>
-                </form>
+                <form  action="https://formsubmit.co/office@clarified.ro"
+       method="POST"
+       class="google-form">        <!-- keep the existing class for CSS -->
+       
+  <!-- OPTIONAL hidden fields -->
+  <input type="hidden" name="_subject" value="Mesaj nou de pe pagina de contact">
+  <input type="hidden" name="_captcha" value="false">  <!-- turn off their captcha -->
+  <input type="hidden" name="_next" value="https://clarified.ro/contact.html#sent">   <!-- where to redirect after success -->
+
+  <!-- your visible fields -->
+  <input   type="text"   name="name"    placeholder="Your name"  required>
+  <input   type="email"  name="email"   placeholder="Your email" required>
+  <input   type="text"   name="subject" placeholder="Subject"    required>
+  <textarea name="message"             placeholder="Your message" required></textarea>
+
+  <button type="submit">Trimite</button>
+</form>
                 <div id="form-msg"></div>
             </div>
         </div>
@@ -128,7 +140,7 @@
         <div class="footer-main">
             <div class="container office-info">
                 <div class="office">
-                    <h4>RO Office</h4>
+                    <h4>Sediu RO </h4>
                     <p>Str. Oltului Nr. 3, Ap. 12, Buftea, Ilfov, Romania<br>Email: office@clarified.ro<br>Phone:
                         +40774456127</p>
                 </div>
