@@ -93,3 +93,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+/*  script/contact.js  */
+document.addEventListener("DOMContentLoaded", () => {
+  const form   = document.getElementById("contact-form");
+  const status = document.getElementById("form-msg");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();               // opreşte redirect-ul
+    status.className = "form-msg";    // reset stil
+    status.textContent = "Se trimite…";
+    status.style.display = "block";
+
+    try {
+      const res = await fetch(form.action, {
+        method : "POST",
+        body   : new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        status.textContent = "Mulțumim! Mesajul a fost trimis.";
+        status.classList.add("success");
+        form.reset();                 // golește câmpurile
+      } else {
+        throw new Error("Server error");
+      }
+    } catch (err) {
+      status.textContent =
+        "Ups! Nu am putut trimite mesajul. Încearcă din nou sau scrie-ne direct la office@clarified.ro.";
+      status.classList.add("error");
+    }
+  });
+});
