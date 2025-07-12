@@ -90,27 +90,25 @@
 
             <!-- Right Column: Form -->
 <div class="contact-form">
-  <form id="contact-form"
-        action="https://formsubmit.co/ajax/office@clarified.ro"
-        method="POST"
-        class="google-form">
+                <form  action="https://formsubmit.co/office@clarified.ro"
+       method="POST"
+       class="google-form">        <!-- keep the existing class for CSS -->
+       
+  <!-- OPTIONAL hidden fields -->
+  <input type="hidden" name="_subject" value="Mesaj nou de pe pagina de contact">
+  <input type="hidden" name="_captcha" value="false">  <!-- turn off their captcha -->
+  <input type="hidden" name="_next" value="https://mcapostol.github.io/Clarified-Website-Final/contact.html">   <!-- where to redirect after success -->
 
-    <!-- câmpurile vizibile -->
-    <input  type="text"   name="name"    placeholder="Nume"   required>
-    <input  type="email"  name="email"   placeholder="Email"  required>
-    <input  type="text"   name="subject" placeholder="Subiect" required>
-    <textarea name="message" placeholder="Mesajul tău" required></textarea>
+  <!-- your visible fields -->
+  <input   type="text"   name="name"    placeholder="Your name"  required>
+  <input   type="email"  name="email"   placeholder="Your email" required>
+  <input   type="text"   name="subject" placeholder="Subject"    required>
+  <textarea name="message"             placeholder="Your message" required></textarea>
 
-    <!-- opţional – rămân valabile -->
-    <input type="hidden" name="_subject" value="Mesaj nou de pe pagina de contact">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit">Trimite</button>
-  </form>
-
-  <!-- aici va apărea confirmarea -->
-  <div id="form-msg" class="form-msg"></div>
-</div>
+  <button type="submit">Trimite</button>
+</form>
+                <div id="form-msg"></div>
+            </div>
         </div>
     </section>
 
