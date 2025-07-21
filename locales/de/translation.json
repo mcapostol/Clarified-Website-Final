@@ -1,0 +1,129 @@
+
+{
+  "brand": "Clarified",
+
+  "topbar": {
+    "email": "office@clarified.ro",
+    "phone1": "+40774456127",
+    "phone2": "+40751018695",
+    "location": "Bukarest, RO"
+  },
+
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "services": "Dienstleistungen",
+    "customs": "Clarified Zoll",
+    "opslog": "Clarified Betrieb & Logistik",
+    "it": "Clarified IT",
+    "contact": "Kontakt",
+    "cta": "Beratung anfordern"
+  },
+
+  "hero": {
+    "headline": "Zollberatung. Logistische Effizienz. Intelligente Digitalisierung",
+    "subtitle": "Clarified bietet maßgeschneiderte Lösungen für sicheres, skalierbares Wachstum.",
+    "cta": "Mit einem Berater sprechen"
+  },
+
+  "services": {
+    "title": "Unsere Expertise",
+    "subtitle": "Spezialisierte Dienstleistungen, um in einer digitalen Welt zu bestehen.",
+    "s1": {
+      "title": "Strategische Klarheit in Zollprozessen",
+      "desc": "Wir verwandeln komplexe Zoll- und Betriebsabläufe in praktikable, skalierbare Strategien.",
+      "link": "Mehr erfahren"
+    },
+    "s2": {
+      "title": "Operatives & Logistik-Management",
+      "desc": "Beschleunigen Sie Ihren Weg zur Exzellenz durch Optimierung von Transport, Lagerung, Inventur und mehr.",
+      "link": "Mehr erfahren"
+    },
+    "s3": {
+      "title": "Inventur-Services",
+      "desc": "Treffen Sie datenbasierte Entscheidungen mit unseren Inventur- und Asset-Services.",
+      "link": "Mehr erfahren"
+    },
+    "s4": {
+      "title": "IT leicht gemacht",
+      "desc": "Transparente Konzeption und Implementierung leicht verständlicher IT-Lösungen.",
+      "link": "Mehr erfahren"
+    }
+  },
+
+  "about": {
+    "title": "Eine Vision für Klarheit und Wachstum",
+    "desc": "Clarified verwandelt Herausforderungen in strategische Strukturen durch operative Klarheit und digitale Innovation. Unser Ziel ist es, modernen Unternehmen zu helfen, Komplexität zu meistern und mit Zuversicht zu wachsen.",
+    "quote": "Klarheit ist nicht nur ein Prinzip – sie ist unser Versprechen.",
+    "quoteAuthor": "— Cristian A., CEO von Clarified",
+    "link": "Mehr erfahren",
+    "imageAlt": "Clarified-Teammeeting"
+  },
+
+  "works": {
+    "title": "Aktuelle Projekte",
+    "subtitle": "Entdecken Sie unsere neuesten Projekte, die Transformation und Wirkung erzielen.",
+    "w1": {
+      "alt": "Logistikfluss",
+      "title": "Aufbau des logistischen Ablaufs für Photovoltaikparks.",
+      "desc1": "Wir übernehmen die komplette operative Logistik inklusive Transport, Zollformalitäten und Projektmanagement für multimodale Importe.",
+      "desc2": "Außerdem verwalten wir Genehmigungen und tragen alle Flüsse im RO-eTransport-System für technische Komponenten ein."
+    },
+    "w2": {
+      "alt": "Import-Export",
+      "title": "Export, Import, Transit und andere Zollabwicklungen.",
+      "desc": "Wir haben Import- und Exportflüsse unter allen Bedingungen für jede Produktart innerhalb und außerhalb der EU realisiert."
+    },
+    "w3": {
+      "alt": "Inventur",
+      "title": "Inventur-Dienstleistungen auf höchstem Niveau.",
+      "desc": "Wir schaffen Klarheit über Bestände und andere Vermögenswerte für die jährliche Inventur oder in Liquidationsprozessen."
+    }
+  },
+
+  "features": {
+    "title": "Warum Clarified?",
+    "subtitle": "Unsere Fähigkeiten bringen Ihr Unternehmen im heutigen Wettbewerbsumfeld voran.",
+    "f1": {
+      "title": "Erstklassige Zollberatung",
+      "desc": "Akkreditierte Berater helfen, Zollkosten zu optimieren."
+    },
+    "f2": {
+      "title": "Operatives Logistik-Management",
+      "desc": "Wir straffen Prozesse, damit Effizienz zu Kosteneinsparungen führt."
+    },
+    "f3": {
+      "title": "Inventur & Personal-Leasing",
+      "desc": "Dedizierte Teams für ausgelagerte Inventuren, die Bestände transparent machen."
+    },
+    "f4": {
+      "title": "Individuelle IT-Lösungen",
+      "desc": "Gemeinsam entwickeln wir Lösungen, die wirklich funktionieren."
+    }
+  },
+
+  "stats": {
+    "s1": "Abgeschlossene Projekte",
+    "s2": "Prozess-Optimierungen",
+    "s3": "Jahre Erfahrung",
+    "s4": "Zufriedene Kunden",
+    "rightTitle": "Komplexität in Klarheit verwandeln – Entscheidung für Entscheidung.",
+    "rightBtn": "Kontaktieren Sie uns"
+  },
+
+  "footer": {
+    "cta": {
+      "title": "Benötigen Sie erstklassige Beratung?",
+      "btn": "Kontaktieren Sie uns"
+    },
+    "office": {
+      "title": "Standort RO",
+      "address": "Str. Oltului 3, Ap. 12, Buftea, Kreis Ilfov\nE-Mail: office@clarified.ro\nTelefon: +40774456127"
+    },
+    "links": {
+      "contact": "Kontakt",
+      "privacy": "Datenschutz-Richtlinie"
+    },
+    "credit": "© 2025 Clarified. Powered by Clarified Digital."
+  }
+}

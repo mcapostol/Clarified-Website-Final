@@ -1,0 +1,129 @@
+
+{
+  "brand": "Clarified",
+
+  "topbar": {
+    "email": "office@clarified.ro",
+    "phone1": "+40774456127",
+    "phone2": "+40751018695",
+    "location": "București, RO"
+  },
+
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre Noi",
+    "services": "Servicii",
+    "customs": "Clarified Vamă",
+    "opslog": "Clarified Operational & Logistic",
+    "it": "Clarified IT",
+    "contact": "Contact",
+    "cta": "Cere consultanță aici!"
+  },
+
+  "hero": {
+    "headline": "Consultanță Vamală. Eficiență Logistică. Digitalizare Inteligentă",
+    "subtitle": "Clarified îți oferă soluții personalizate pentru creștere sigură și scalabilă.",
+    "cta": "Discută cu un Consultant"
+  },
+
+  "services": {
+    "title": "Experiența Noastră",
+    "subtitle": "Servicii specializate care să vă ajute să performați într-o lume digitală.",
+    "s1": {
+      "title": "Claritate Strategică în Procese Vamale",
+      "desc": "Vă ajutăm să simplificați operațiuni vamale și operaționale complexe în strategii scalabile și practice.",
+      "link": "Descoperă mai multe"
+    },
+    "s2": {
+      "title": "Management Operațional Logistic",
+      "desc": "Tranzitează rapid afacerea ta către excelență prin optimizarea transportului, depozitării, inventarierii și a altor procese.",
+      "link": "Descoperă mai multe"
+    },
+    "s3": {
+      "title": "Servicii de Inventariere",
+      "desc": "Folosește analiza datelor pentru a lua decizii inteligente cu ajutorul serviciilor noastre de inventariere a patrimoniului.",
+      "link": "Descoperă mai multe"
+    },
+    "s4": {
+      "title": "IT pe Înțelesul Tău",
+      "desc": "Construcții și implementări transparente de soluții IT ușor de înțeles.",
+      "link": "Descoperă mai multe"
+    }
+  },
+
+  "about": {
+    "title": "O viziune care aduce claritate și creștere",
+    "desc": "La Clarified, transformăm provocările în structuri strategice prin claritate operațională și inovație digitală. Scopul nostru este să ajutăm companiile moderne să navigheze prin complexitate și să se extindă cu încredere.",
+    "quote": "Claritatea nu este doar un principiu – este promisiunea noastră.",
+    "quoteAuthor": "— Cristian A., CEO al Clarified",
+    "link": "Descoperă mai multe",
+    "imageAlt": "Echipa Clarified într-o întâlnire"
+  },
+
+  "works": {
+    "title": "Lucrări Recente",
+    "subtitle": "Explorează cele mai recente proiecte ale noastre din diverse industrii, care generează transformare și impact.",
+    "w1": {
+      "alt": "Flux operațional logistic",
+      "title": "Crearea fluxului operațional logistic pentru parcuri fotovoltaice.",
+      "desc1": "Am preluat responsabilitatea operațional-logistică, incluzând transportul, formalitățile vamale și managementul de proiect pentru importuri multimodale.",
+      "desc2": "Gestionăm autorizarea tranzacțiilor și înregistrăm toate fluxurile în RO e-Transport pentru componentele tehnice necesare parcurilor fotovoltaice."
+    },
+    "w2": {
+      "alt": "Import-Export",
+      "title": "Export, import, tranzit și alte operațiuni vamale.",
+      "desc": "Am operaționalizat fluxuri de import și export în orice condiții și pentru orice tip de produs, atât în UE, cât și în afara ei."
+    },
+    "w3": {
+      "alt": "Inventariere",
+      "title": "Servicii de inventariere livrate cu excelență.",
+      "desc": "Oferim claritate asupra stocurilor și a altor active, pentru inventarierea anuală sau în procese de lichidare și dizolvare."
+    }
+  },
+
+  "features": {
+    "title": "De ce să alegi Clarified",
+    "subtitle": "Capabilitățile noastre te ajută să-ți duci afacerea la următorul nivel într-o lume competitivă.",
+    "f1": {
+      "title": "Consultanță Vamală de Top",
+      "desc": "Consultanți acreditați te ajută să optimizezi costurile operațiunilor vamale."
+    },
+    "f2": {
+      "title": "Management Operațional-Logistic",
+      "desc": "Eficientizăm procesele și fluxurile astfel încât economia de costuri să fie vizibilă."
+    },
+    "f3": {
+      "title": "Inventariere și Leasing de Personal",
+      "desc": "Echipe dedicate pentru inventariere externalizată care aduc claritate stocurilor."
+    },
+    "f4": {
+      "title": "Soluții dedicate IT",
+      "desc": "Colaborăm cu tine pentru a crea soluții care funcționează cu adevărat."
+    }
+  },
+
+  "stats": {
+    "s1": "Proiecte Livrate",
+    "s2": "Optimizări ale Proceselor",
+    "s3": "Ani de Experiență",
+    "s4": "Clienți Fericiți",
+    "rightTitle": "Transformând complexitatea în claritate, cu fiecare decizie evaluată de noi.",
+    "rightBtn": "Contactează-ne!"
+  },
+
+  "footer": {
+    "cta": {
+      "title": "Ai nevoie de consultanță de top?",
+      "btn": "Contactează-ne"
+    },
+    "office": {
+      "title": "Sediu RO",
+      "address": "Str. Oltului Nr. 3, Ap. 12, Buftea, Județul Ilfov\nEmail: office@clarified.ro\nTelefon: +40774456127"
+    },
+    "links": {
+      "contact": "Contactează-ne",
+      "privacy": "Politica de Confidențialitate"
+    },
+    "credit": "© 2025 Clarified. Powered by Clarified Digital."
+  }
+}
