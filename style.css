@@ -1093,3 +1093,20 @@ button[type="submit"]:disabled {
     border: 1px solid #dc3545;
     color: #842029;
 }
+/* ----- Hide-on-scroll header ----- */
+.site-header {
+  position: sticky;          /* rămâne lipit de top */
+  top: 0;
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.site-header.hide-header {
+  transform: translateY(-100%);
+}
+/* ---------- Hide header numai pe mobile ---------- */
+@media (max-width: 767px) {
+  .site-header.hide-header {
+    transform: translateY(-100%);
+  }
+}
