@@ -28,6 +28,10 @@ function renderPage() {
     } else {
       el.innerHTML = i18next.t(key);
     }
+     /* marchează steagul activ */
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.langSwitch === i18next.language);
+  });
   });
 
   // actualizează atributul lang din <html>
