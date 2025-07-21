@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarified IT – Clarified – Digital Growth Solutions</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
-<!-- Safari pinned tab (opţional) -->
-<link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
+    <!-- Safari pinned tab (opţional) -->
+    <link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
-        <!-- SEO & Open Graph -->
-<meta name="description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
-<meta property="og:type"        content="website">
-<meta property="og:site_name"   content="Clarified">
-<meta property="og:title"       content="Clarified – IT pe intelesul tau">
-<meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
-<meta property="og:url"         content="https://clarified.ro">
-<meta property="og:image"       content="https://clarified.ro/img/Import Export.jpg">
+    <!-- SEO & Open Graph -->
+    <meta name="description"
+        content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Clarified">
+    <meta property="og:title" content="Clarified – IT pe intelesul tau">
+    <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
+    <meta property="og:url" content="https://clarified.ro">
+    <meta property="og:image" content="https://clarified.ro/img/Import Export.jpg">
 </head>
+
 <body>
     <!-- Header Section -->
     <header class="site-header">
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <i class="fas fa-envelope"></i> <a href="mailto:office@clarified.ro">office@clarified.ro</a>
-                    <i class="fas fa-phone-alt"></i> <a href="tel:+40774456127">+40774456127</a>
+                    <span><i class="fas fa-envelope"></i> <a
+                            href="mailto:office@clarified.ro">office@clarified.ro</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40774456127">+40774456127</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40751018695">+40751018695</a></span>
                 </div>
                 <div class="location-info">
                     <i class="fas fa-map-marker-alt"></i> Bucharest, RO
@@ -37,29 +44,38 @@
         <div class="header-main">
             <div class="container header-flex">
                 <div class="logo">
-                    <img src="img/logo.png"
-                        alt="Clarified Logo" />
+                    <img src="img/logo.png" alt="Clarified Logo" />
                     <span class="brand-name">Clarified</span>
                 </div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Acasa</a></li>
-                        <li><a href="index.html#about">Despre Noi</a></li>
-                        <li class="dropdown">
-                          <a href="#">Servicii <i class="fas fa-chevron-down"></i></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="clarified-customs.html">Clarified Vama</a></li>
-                            <li><a href="clarified-ops-logistics.html">Clarified Operational & Logistic</a></li>
-                            <li><a href="clarified-it.html">Clarified IT</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <!-- <li><a href="#">Blog</a></li> -->
-                      </ul>                      
+                <nav class="nav-wrapper">
+                    <div class="nav-left">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">Acasa</a></li>
+                            <li><a href="#about">Despre Noi</a></li>
+                            <li class="dropdown">
+                                <a href="#">Servicii <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="clarified-customs.html">Clarified Vama</a></li>
+                                    <li><a href="clarified-ops-logistics.html">Clarified Operational & Logistic</a></li>
+                                    <li><a href="clarified-it.html">Clarified IT</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- <li><a href="#">Blog</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <div class="language-selector">
+                            <a href="en/clarified-it.html"><img src="img/flags/en.png" alt="English"></a>
+                            <a href="fr/clarified-it.html"><img src="img/flags/fr.png" alt="French"></a>
+                            <a href="de/clarified-it.html"><img src="img/flags/de.png" alt="German"></a>
+                        </div>
+                        <div class="cta-button">
+                            <a href="contact.html#contact" class="btn-primary">Cere consultanță aici!</a>
+                        </div>
+                    </div>
                 </nav>
-                <div class="cta-button">
-                    <a href="contact.html#contact" class="btn-primary">Cere Consultanță</a>
-                </div>
             </div>
         </div>
     </header>
@@ -82,25 +98,29 @@
                 <div class="service-item">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Claritate Strategica</h3>
-                    <p>Va ajutam sa intelegeți si sa construiți sisteme digitale eficiente intr-un mod transparent pentru a acoperi nevoiele curente dar si cele viitoare.</p>
+                    <p>Va ajutam sa intelegeți si sa construiți sisteme digitale eficiente intr-un mod transparent
+                        pentru a acoperi nevoiele curente dar si cele viitoare.</p>
                     <a href="#">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-rocket"></i>
                     <h3>Accelerare Digitala</h3>
-                    <p>Transformă-ți rapid afacerea prin soluții digitale personalizate, implementate de experții noștri.</p>
+                    <p>Transformă-ți rapid afacerea prin soluții digitale personalizate, implementate de experții
+                        noștri.</p>
                     <a href="#">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-chart-line"></i>
                     <h3>Decizii bazate pe date.</h3>
-                    <p>Valorifică colaborarea cu Clarified pentru a transforma datele brute în insight-uri clare şi a lua decizii rapide, sigure şi profitabile.</p>
+                    <p>Valorifică colaborarea cu Clarified pentru a transforma datele brute în insight-uri clare şi a
+                        lua decizii rapide, sigure şi profitabile.</p>
                     <a href="#">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-search"></i>
                     <h3>Solutii Personalizate</h3>
-                    <p>Câștigă un avantaj real prin soluții croite exact pe nevoile tale, susținute de analize de piață aprofundate și benchmarking competitiv continuu.</p>
+                    <p>Câștigă un avantaj real prin soluții croite exact pe nevoile tale, susținute de analize de piață
+                        aprofundate și benchmarking competitiv continuu.</p>
                     <a href="#">Descopera mai multe</a>
                 </div>
             </div>
@@ -111,29 +131,30 @@
         <div class="container">
             <div class="section-title">
                 <h2>Serviciile Noastre</h2>
-                <p>Descoperă cele mai recente proiecte ale noastre din diverse industrii, care generează transformare și impact.</p>
+                <p>Descoperă cele mai recente proiecte ale noastre din diverse industrii, care generează transformare și
+                    impact.</p>
             </div>
             <div class="works-grid">
                 <div class="work-item">
-                    <img src="img/Analiza sisteme.jpg"
-                        alt="Asset Management">
+                    <img src="img/Analiza sisteme.jpg" alt="Asset Management">
                     <h3>Analiza proceselor și operațiunilor actuale și optimizarea acestora.</h3>
-                    <p> •	Definirea proceselor și intelegerea aportului acestora la activitatea companiei.</p>
-                    <p> •	Analiza eficienței proceselor și sistemelor utilizate în desfășurarea activității.</p>
-                    <p> •	Actualizarea și eficientizarea sistemelor utilizate.</p>
+                    <p> • Definirea proceselor și intelegerea aportului acestora la activitatea companiei.</p>
+                    <p> • Analiza eficienței proceselor și sistemelor utilizate în desfășurarea activității.</p>
+                    <p> • Actualizarea și eficientizarea sistemelor utilizate.</p>
                 </div>
                 <div class="work-item">
-                    <img src="img/ERP-WMS.jpg"
-                        alt="Advanced Analytics">
+                    <img src="img/ERP-WMS.jpg" alt="Advanced Analytics">
                     <h3>Consultanță în identificarea de soluții optime.</h3>
-                    <p> •	Consultanță implementare ERP, WMS, TMS și de planificare a producției în acord cu nevoia și trendul de dezvoltare al companiei.</p>
-                    <p> •	Consultanță implementare alte softuri de gestiune în acord cu nevoia și trendul de dezvoltare al companiei.</p>
+                    <p> • Consultanță implementare ERP, WMS, TMS și de planificare a producției în acord cu nevoia și
+                        trendul de dezvoltare al companiei.</p>
+                    <p> • Consultanță implementare alte softuri de gestiune în acord cu nevoia și trendul de dezvoltare
+                        al companiei.</p>
                 </div>
                 <div class="work-item">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80"
                         alt="Corporate Finance">
                     <h3>Automatizare și integrare platforme</h3>
-                    <p>•	Consultanță pentru legatura site-urilor/magazinelor și a softurilor de gestiune.</p>
+                    <p>• Consultanță pentru legatura site-urilor/magazinelor și a softurilor de gestiune.</p>
                 </div>
             </div>
         </div>
@@ -143,13 +164,15 @@
         <div class="container">
             <div class="section-title">
                 <h2>De ce sa alegi Clarified?</h2>
-                <p>Capacitățile noastre sunt concepute pentru a-ți propulsa afacerea în lumea digitală competitivă de astăzi.</p>
+                <p>Capacitățile noastre sunt concepute pentru a-ți propulsa afacerea în lumea digitală competitivă de
+                    astăzi.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-item">
                     <i class="fas fa-piggy-bank"></i>
                     <h3>Economisesti timp si resure</h3>
-                    <p>Automatizăm procesele IT, reducând orele de muncă și costurile operaționale dintr-o singură mișcare.</p>
+                    <p>Automatizăm procesele IT, reducând orele de muncă și costurile operaționale dintr-o singură
+                        mișcare.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-chart-pie"></i>
@@ -159,7 +182,8 @@
                 <div class="feature-item">
                     <i class="fas fa-paint-brush"></i>
                     <h3>Design Personalizat al solutiilor IT</h3>
-                    <p>Proiectăm soluții IT pe măsura afacerii tale, combinând funcționalitatea cu estetica într-un singur sistem integrat.</p>
+                    <p>Proiectăm soluții IT pe măsura afacerii tale, combinând funcționalitatea cu estetica într-un
+                        singur sistem integrat.</p>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-headset"></i>
@@ -257,4 +281,5 @@
         </div>
     </footer>
 </body>
+
 </html>

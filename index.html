@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarified – Digital Growth Solutions</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
-<!-- Safari pinned tab (opţional) -->
-<link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
+    <!-- Safari pinned tab (opţional) -->
+    <link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
     <!-- SEO & Open Graph -->
-<meta name="description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
-<meta property="og:type"        content="website">
-<meta property="og:site_name"   content="Clarified">
-<meta property="og:title"       content="Clarified – Home">
-<meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
-<meta property="og:url"         content="https://clarified.ro">
-<meta property="og:image"       content="https://clarified.ro/img/Import Export.jpg">
+    <meta name="description"
+        content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Clarified">
+    <meta property="og:title" content="Clarified – Home">
+    <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
+    <meta property="og:url" content="https://clarified.ro">
+    <meta property="og:image" content="https://clarified.ro/img/Import Export.jpg">
 
 </head>
 
@@ -29,8 +30,12 @@
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
-                    <i class="fas fa-envelope"></i> <a href="mailto:office@clarified.ro">office@clarified.ro</a>
-                    <i class="fas fa-phone-alt"></i> <a href="tel:+40774456127">+40774456127 | +40751018695</a>
+                    <span><i class="fas fa-envelope"></i> <a
+                            href="mailto:office@clarified.ro">office@clarified.ro</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40774456127">+40774456127</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40751018695">+40751018695</a></span>
                 </div>
                 <div class="location-info">
                     <i class="fas fa-map-marker-alt"></i> Bucharest, RO
@@ -43,25 +48,35 @@
                     <img src="img/logo.png" alt="Clarified Logo" />
                     <span class="brand-name">Clarified</span>
                 </div>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#home">Acasa</a></li>
-                        <li><a href="index.html#about">Despre Noi</a></li>
-                        <li class="dropdown">
-                            <a href="#">Servicii <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="clarified-customs.html">Clarified Vama</a></li>
-                                <li><a href="clarified-ops-logistics.html">Clarified Operational & Logistic</a></li>
-                                <li><a href="clarified-it.html">Clarified IT</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <!-- <li><a href="#">Blog</a></li> -->
-                    </ul>
+                <nav class="nav-wrapper">
+                    <div class="nav-left">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">Acasa</a></li>
+                            <li><a href="#about">Despre Noi</a></li>
+                            <li class="dropdown">
+                                <a href="#">Servicii <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="clarified-customs.html">Clarified Vama</a></li>
+                                    <li><a href="clarified-ops-logistics.html">Clarified Operational & Logistic</a></li>
+                                    <li><a href="clarified-it.html">Clarified IT</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- <li><a href="#">Blog</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <div class="language-selector">
+                            <a href="en/index.html"><img src="img/flags/en.png" alt="English"></a>
+                            <a href="fr/index.html"><img src="img/flags/fr.png" alt="French"></a>
+                            <a href="de/index.html"><img src="img/flags/de.png" alt="German"></a>
+                        </div>
+                        <div class="cta-button">
+                            <a href="contact.html#contact" class="btn-primary">Cere consultanță aici!</a>
+                        </div>
+                    </div>
                 </nav>
-                <div class="cta-button">
-                    <a href="contact.html#contact" class="btn-primary">Cere Consultanță</a>
-                </div>
             </div>
         </div>
     </header>
@@ -86,33 +101,36 @@
                 <div class="service-item">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Claritate Strategica in Procese Vamale</h3>
-                    <p>Vă ajutăm să simplificați operațiuni vamale si operaționale complexe în strategii scalabile și practice.</p>
-                    <a href="#">Descopera mai multe</a>
+                    <p>Vă ajutăm să simplificați operațiuni vamale si operaționale complexe în strategii scalabile și
+                        practice.</p>
+                    <a href="clarified-customs.html">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-rocket"></i>
                     <h3>Management Operațional Logistic</h3>
-                    <p>Tranziteaza rapid afacerea ta către excelență prin alegerea serviciilor noastre de optimizare si management al operatiunilor de transport, depozitare, inventariere si nu numai.
+                    <p>Tranziteaza rapid afacerea ta către excelență prin alegerea serviciilor noastre de optimizare si
+                        management al operatiunilor de transport, depozitare, inventariere si nu numai.
                     </p>
-                    <a href="#">Descopera mai multe</a>
+                    <a href="clarified-ops-logistics.html">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-chart-line"></i>
                     <h3>Servicii de inventariere</h3>
-                    <p>Folosește analiza datelor pentru a lua decizii de afaceri inteligente, susținute de date reale folosind serviciile noastre de inventariere a patrimoniului.
+                    <p>Folosește analiza datelor pentru a lua decizii de afaceri inteligente, susținute de date reale
+                        folosind serviciile noastre de inventariere a patrimoniului.
                     </p>
-                    <a href="#">Descopera mai multe</a>
+                    <a href="clarified-ops-logistics.html">Descopera mai multe</a>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-search"></i>
                     <h3>IT pe Intelesul Tau.</h3>
                     <p>Construcții si implementări transparente de soluții IT usor de ințeles.</p>
-                    <a href="#">Descopera mai multe</a>
+                    <a href="clarified-it.html">Descopera mai multe</a>
                 </div>
             </div>
         </div>
     </section>
-   
+
     <!-- About Us Section -->
     <section id="about" class="about-us">
         <div class="container about-container">
@@ -150,78 +168,88 @@
             </div>
             <div class="works-grid">
                 <div class="work-item">
-                    <img src="img/Flux operational logisitc image.jpg"
-                        alt="Administrarea activelor">
+                    <img src="img/Flux operational logisitc image.jpg" alt="Administrarea activelor">
                     <h3>Crearea fluxului operațional logistic pentru parcuri fotovoltaice.</h3>
-                    <p>Am preluat cu succes responsabilitatea operațional-logistică, care include transportul, formalitățile vamale și managementul de proiect pentru mai multe inițiative ce implică importuri și transport multimodal (maritim, aerian și terestru).</p>
-                    <p>De asemenea, gestionăm autorizarea tranzacțiilor și procesăm, respectiv înregistrăm, toate fluxurile în sistemul RO e-Transport pentru componentele tehnice necesare construirii mai multor parcuri fotovoltaice.</p>
+                    <p>Am preluat cu succes responsabilitatea operațional-logistică, care include transportul,
+                        formalitățile vamale și managementul de proiect pentru mai multe inițiative ce implică importuri
+                        și transport multimodal (maritim, aerian și terestru).</p>
+                    <p>De asemenea, gestionăm autorizarea tranzacțiilor și procesăm, respectiv înregistrăm, toate
+                        fluxurile în sistemul RO e-Transport pentru componentele tehnice necesare construirii mai multor
+                        parcuri fotovoltaice.</p>
                 </div>
                 <div class="work-item">
-                    <img src="img/Import Export.jpg"
-                        alt="Analitică avansată">
+                    <img src="img/Import Export.jpg" alt="Analitică avansată">
                     <h3>Export, import , tranzit si alte operatiuni vamale.</h3>
-                    <p>Am reusit cu succes sa operationalizam fluxuri de import si export in orice conditii si pentru orice tip de produs in/din state membre UE dar si in/din afara Uniunii Europene. </p>
+                    <p>Am reusit cu succes sa operationalizam fluxuri de import si export in orice conditii si pentru
+                        orice tip de produs in/din state membre UE dar si in/din afara Uniunii Europene. </p>
                 </div>
                 <div class="work-item">
-                    <img src="img/Inventar img.jpg"
-                        alt="Finanțe corporative">
+                    <img src="img/Inventar img.jpg" alt="Finanțe corporative">
                     <h3>Servicii de inventariere livrate cu excelenta.</h3>
-                    <p>Oferim claritate asupra stocurilor si a altor active detinute de societati comericale atat pentru satisfacerea nevoii de inventariere anuala cat si in situatii de lichidare si dizolvare. Avem aici nenumarate proiecte realizate cu succes despre care va putem povesti in prima noastra intalnire :) .</p>
+                    <p>Oferim claritate asupra stocurilor si a altor active detinute de societati comericale atat pentru
+                        satisfacerea nevoii de inventariere anuala cat si in situatii de lichidare si dizolvare. Avem
+                        aici nenumarate proiecte realizate cu succes despre care va putem povesti in prima noastra
+                        intalnire :) .</p>
                 </div>
             </div>
         </div>
- 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>De ce să alegi Clarified</h2>
-                <p>Capabilitățile noastre sunt concepute pentru a-ți duce afacerea la următorul nivel în lumea vamala , opeartionala si digitală
-                    competitivă de azi.</p>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>De ce să alegi Clarified</h2>
+                    <p>Capabilitățile noastre sunt concepute pentru a-ți duce afacerea la următorul nivel în lumea
+                        vamala , opeartionala si digitală
+                        competitivă de azi.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h3>Consultanța Vamală de Top</h3>
+                        <p>Avem consultanți acreditați , membrii ai Camerei Consultanților Fiscali ai Romaniei , care va
+                            vor ajuta sa optimizați costurile operatiunilor vamale.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Management Operațional-Logistic</h3>
+                        <p>Consultanții nostri cu o experiența vasta in domeniu va pot ajuta sa optimizați procesle
+                            operationale si fluxurile logistice astfel incat eficienta sa poata fi tradusa si in costuri
+                            reduse.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Servcii de inventariere si leasing de personal</h3>
+                        <p>Va punem la dispozitie echipe dedicate pentru servicii de inventariere externalizate care sa
+                            aduca Claritate stocurilor Dvs.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Soluții dedicate IT</h3>
+                        <p>Colaborăm cu tine pentru a crea soluții care funcționează cu adevărat.</p>
+                    </div>
+                </div>
             </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-piggy-bank"></i>
-                    <h3>Consultanța Vamală de Top</h3>
-                    <p>Avem consultanți acreditați , membrii ai Camerei Consultanților Fiscali ai Romaniei , care va vor ajuta sa optimizați costurile operatiunilor vamale.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Management Operațional-Logistic</h3>
-                    <p>Consultanții nostri cu o experiența vasta in domeniu va pot ajuta sa optimizați procesle operationale si fluxurile logistice astfel incat eficienta sa poata fi tradusa si in costuri reduse.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Servcii de inventariere si leasing de personal</h3>
-                    <p>Va punem la dispozitie echipe dedicate pentru servicii de inventariere externalizate care sa aduca Claritate stocurilor Dvs.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-headset"></i>
-                    <h3>Soluții dedicate IT</h3>
-                    <p>Colaborăm cu tine pentru a crea soluții care funcționează cu adevărat.</p>
-                </div>
-            </div>
-        </div>
-           </section>
-       </section>
+        </section>
+    </section>
     <!-- Stats Section -->
     <section id="home" class="stats">
         <div class="container stats-container">
             <div class="stats-left">
                 <div class="stat-box">
-                    <h2>150+</h2>
+                    <h2 class="counter" data-target="150" data-suffix="+">0+</h2>
                     <p>Proiecte Livrate</p>
                 </div>
                 <div class="stat-box">
-                    <h2>80+</h2>
+                    <h2 class="counter" data-target="80" data-suffix="+">0+</h2>
                     <p>Optimizari ale Proceselor</p>
                 </div>
                 <div class="stat-box">
-                    <h2>15+</h2>
+                    <h2 class="counter" data-target="15" data-suffix="+">0+</h2>
                     <p>Ani de Exepriența</p>
                 </div>
                 <div class="stat-box">
-                    <h2>100%</h2>
+                    <h2 class="counter" data-target="100" data-suffix="%">0%</h2>
                     <p>Clienți Fericiți</p>
                 </div>
             </div>
@@ -320,6 +348,7 @@
             </div>
         </div>
     </footer>
+    <script src="script/counter.js"></script>
 </body>
 
 </html>
