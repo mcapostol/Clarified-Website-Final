@@ -53,3 +53,20 @@ function getBase() {
   if (parts.length > 2) return `/${parts[1]}`;  // repo root
   return '';
 }
+/* ======== Hide header on scroll ========= */
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentY = window.scrollY;
+
+  if (currentY > lastScrollY && currentY > 80) {
+    // scroll în jos → ascunde
+    header.classList.add('hide-header');
+  } else {
+    // scroll în sus → arată
+    header.classList.remove('hide-header');
+  }
+
+  lastScrollY = currentY;
+});
