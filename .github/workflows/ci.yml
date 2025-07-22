@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Dacă mai târziu adaugi NPM / Sass:
+      # - run: npm ci
+      # - run: npm run build
+      - run: echo "✅ CI finished (placeholder)"
