@@ -21,7 +21,7 @@ Built as a static site (HTML/SCSS) and deployed via GitHub Actions to Azure S
 
 <!-- screenshot -->
 <p align="center">
-  <img src="public/screenshot.png" width="720" alt="Homepage screenshot">
+  <img src="img/screenshot.png" width="720" alt="Homepage screenshot">
 </p>
 
 ## Tech stack
