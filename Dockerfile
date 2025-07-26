@@ -1,12 +1,14 @@
-# Etapa de build: compilează SCSS în CSS
-FROM node:18-alpine AS build
-WORKDIR /app
-COPY . .
-RUN npm install -g sass \
-    && sass scss/:dist/css/ --no-source-map
-
-# Etapa finală: servește site-ul cu NGINX
+# Folosim direct NGINX pentru a servi site-ul static
 FROM nginx:alpine
-COPY --from=build /app /usr/share/nginx/html
+
+# Setăm directorul de lucru în container
+WORKDIR /usr/share/nginx/html
+
+# Copiem tot conținutul proiectului în NGINX html folder
+COPY . .
+
+# Expunem portul 80
 EXPOSE 80
+
+# Pornim NGINX în prim-plan
 CMD ["nginx", "-g", "daemon off;"]
