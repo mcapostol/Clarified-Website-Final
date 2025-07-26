@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clarified-svc
+  annotations:
+    # spune-i AKS-ului să folosească pip-ul din RG-ul gestionat de AKS
+    service.beta.kubernetes.io/azure-pip-resource-group: MC_rg-clarified_aks-clarified_westeurope
+    service.beta.kubernetes.io/azure-pip-name: svc-ip
+spec:
+  type: LoadBalancer
+  selector:
+    app: clarified
+  ports:
+    - port: 80
+      targetPort: 80

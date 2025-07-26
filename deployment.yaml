@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clarified-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clarified
+  template:
+    metadata:
+      labels:
+        app: clarified
+    spec:
+      imagePullSecrets:
+      - name: acr-secret
+      containers:
+      - name: web
+        image: clarifiedacr.azurecr.io/clarified-website:latest
+        ports:
+        - containerPort: 80

@@ -31,4 +31,15 @@ Thumbs.db
 
 # Miscellaneous
 docker-compose.override.yml
+
+.git
+
+.github
+
+node_modules
+
+README.md
+
+*.md
+
 ```
