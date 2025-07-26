@@ -45,7 +45,7 @@
 
 ## Features
 
-- 💨 **Lighthouse 95+** performance out‑of‑the‑box  
+- 💨 **Lighthouse 95+**  performance out‑of‑the‑box  
 - 📱 Fully responsive (mobile‑first)  
 - 🗺️ SEO meta tags + sitemap.xml  
 - 🌘 Dark‑mode toggle with CSS variables  
