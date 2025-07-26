@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Clarified – Digital Growth Solutions</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <!-- Safari pinned tab (opţional) -->
+    <link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- SEO & Open Graph -->
+    <meta name="description"
+        content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Clarified">
+    <meta property="og:title" content="Clarified – Contact">
+    <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
+    <meta property="og:url" content="https://clarified.ro">
+    <meta property="og:image" content="https://clarified.ro/img/Import Export.jpg">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-envelope"></i> <a
+                            href="mailto:office@clarified.ro">office@clarified.ro</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40774456127">+40774456127</a></span>
+                    <span class="divider">|</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:+40751018695">+40751018695</a></span>
+                </div>
+                <div class="location-info">
+                    <i class="fas fa-map-marker-alt"></i> Bucharest, RO
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container header-flex">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Clarified Logo" />
+                    <span class="brand-name">Clarified</span>
+                </div>
+                <nav class="nav-wrapper">
+                    <div class="nav-left">
+                        <ul class="nav-menu">
+                            <li><a href="index.html">Acasa</a></li>
+                            <li><a href="#about">Despre Noi</a></li>
+                            <li class="dropdown">
+                                <a href="#">Servicii <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="clarified-customs.html">Clarified Vama</a></li>
+                                    <li><a href="clarified-ops-logistics.html">Clarified Operational & Logistic</a></li>
+                                    <li><a href="clarified-it.html">Clarified IT</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- <li><a href="#">Blog</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="nav-right">
+                        <div class="language-selector">
+                            <a href="en/contact.html"><img src="img/flags/en.png" alt="English"></a>
+                            <a href="fr/contact.html"><img src="img/flags/fr.png" alt="French"></a>
+                            <a href="de/contact.html"><img src="img/flags/de.png" alt="German"></a>
+                        </div>
+                        <div class="cta-button">
+                            <a href="contact.html#contact" class="btn-primary">Cere consultanță aici!</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Banner -->
+    <section class="hero-banner contact-hero">
+        <div class="hero-overlay hero-content">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <!-- Contact Info + Form -->
+    <section id="contact" class="contact-section">
+        <div class="container contact-grid">
+            <!-- Left Column: Offices -->
+            <div class="contact-info">
+                <h3>Adresa Noastra</h3>
+                <div class="office-entry">
+                    <img src="./img/Branch Image.jpg" alt="Branch Image" />
+                    <div>
+                        <p> Str. Oltului Nr. 3, Ap 12, Buftea, Ilfov, Romania</p>
+                        <p><a href="mailto:office@clarified.ro">office@clarified.ro</a></p>
+                        <p>+40774456127 |
+                            +40751018695
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <h3>Head Office Location</h3>
+                <div class="office-entry">
+                    <img src="https://via.placeholder.com/80x100" alt="Head Office Image" />
+                    <div>
+                        <p>PO Box 1622 Collins Street West Victoria 8007 Australia</p>
+                        <p><a href="mailto:info@clarified.co">info@clarified.co</a></p>
+                        <p>+61 2 9550 1234</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="contact-form">
+                <form id="contact-form" action="https://formsubmit.co/ajax/office@clarified.ro" method="POST"
+                    class="google-form">
+
+                    <!-- câmpuri vizibile -->
+                    <input type="text" name="name" placeholder="Nume" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subiect" required>
+                    <textarea name="message" placeholder="Mesajul tău" required></textarea>
+
+                    <!-- opțional, rămân valabile -->
+                    <input type="hidden" name="_subject" value="Mesaj nou de pe pagina de contact">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <button type="submit">Trimite</button>
+                </form>
+
+                <!-- aici apare confirmarea -->
+                <div id="form-msg" class="form-msg"></div>
+            </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <iframe
+            src="https://maps.google.com/maps?q=Strada%20Oltului%203%2C%20Buftea%2C%20Ilfov%2C%20Romania&z=16&output=embed"
+            width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- Top CTA -->
+        <div class="footer-top">
+            <div class="container footer-cta">
+                <div class="cta-text">
+                    <h2>Ai nevoie de ajutor?</h2>
+                </div>
+                <div>
+                    <a href="#contact" class="cta-btn">Contacteaza-ne!</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Content -->
+        <div class="footer-main">
+            <div class="container office-info">
+                <div class="office">
+                    <h4>Sediu RO </h4>
+                    <p>Str. Oltului Nr. 3, Ap. 12, Buftea, Ilfov, Romania<br>Email: office@clarified.ro<br>Phone:
+                        +40774456127</p>
+                </div>
+                <!-- <div class="office">
+                    <h4>Australia Office</h4>
+                    <p>78 Market St, Sydney, NSW 2000<br>Email: au@clarified.co<br>Phone: +61 2 5550 1234</p>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <div class="footer-links">
+                    <!-- <a href="#">Blog</a> -->
+                    <a href="#contact">Contacteaza-ne!</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p class="credit">© 2025 Clarified. Powered by Clarified Digital.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script/contact.js"></script>
+    
+    <script src="script/counter.js"></script>
+
+<!-- i18next + backend + detector -->
+<script src="https://unpkg.com/i18next@22/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend@1/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector@7/i18nextBrowserLanguageDetector.min.js"></script>
+
+<!-- logica proprie (include și scroll‑hide) -->
+<script src="script/translate.js"></script>
+</body>
+
+</html>

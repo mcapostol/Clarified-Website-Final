@@ -1,0 +1,129 @@
+
+{
+  "brand": "Clarified",
+
+  "topbar": {
+    "email": "office@clarified.ro",
+    "phone1": "+40774456127",
+    "phone2": "+40751018695",
+    "location": "Bucarest, RO"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "customs": "Clarified Douane",
+    "opslog": "Clarified Opérations & Logistique",
+    "it": "Clarified IT",
+    "contact": "Contact",
+    "cta": "Demander une consultation"
+  },
+
+  "hero": {
+    "headline": "Conseil en Douane. Efficacité Logistique. Digitalisation Intelligente",
+    "subtitle": "Clarified propose des solutions sur mesure pour une croissance sûre et évolutive.",
+    "cta": "Parler à un consultant"
+  },
+
+  "services": {
+    "title": "Notre Expertise",
+    "subtitle": "Des services spécialisés pour exceller dans un monde numérique.",
+    "s1": {
+      "title": "Clarté Stratégique des Procédures Douanières",
+      "desc": "Nous transformons des procédures douanières et opérationnelles complexes en stratégies pratiques et évolutives.",
+      "link": "En savoir plus"
+    },
+    "s2": {
+      "title": "Gestion Opérationnelle et Logistique",
+      "desc": "Accélérez votre réussite grâce à l'optimisation du transport, de l'entreposage, de l'inventaire et plus encore.",
+      "link": "En savoir plus"
+    },
+    "s3": {
+      "title": "Services d'Inventaire",
+      "desc": "Exploitez l'analyse de données pour prendre des décisions éclairées via nos services d'inventaire d'actifs.",
+      "link": "En savoir plus"
+    },
+    "s4": {
+      "title": "L'informatique Simplifiée",
+      "desc": "Conception et mise en œuvre transparentes de solutions IT faciles à comprendre.",
+      "link": "En savoir plus"
+    }
+  },
+
+  "about": {
+    "title": "Une vision qui apporte clarté et croissance",
+    "desc": "Chez Clarified, nous transformons les défis en structures stratégiques grâce à la clarté opérationnelle et à l'innovation numérique. Notre objectif est d'aider les entreprises modernes à naviguer dans la complexité et à se développer en toute confiance.",
+    "quote": "La clarté n'est pas seulement un principe – c'est notre promesse.",
+    "quoteAuthor": "— Cristian A., PDG de Clarified",
+    "link": "En savoir plus",
+    "imageAlt": "Réunion d'équipe Clarified"
+  },
+
+  "works": {
+    "title": "Réalisations Récentes",
+    "subtitle": "Découvrez nos projets récents qui génèrent transformation et impact.",
+    "w1": {
+      "alt": "Flux logistique",
+      "title": "Création du flux logistique opérationnel pour des parcs photovoltaïques.",
+      "desc1": "Nous avons pris en charge la logistique opérationnelle, incluant transport, formalités douanières et gestion de projet pour des importations multimodales.",
+      "desc2": "Nous gérons aussi les autorisations et enregistrons tous les flux dans le système RO e-Transport pour les composants techniques nécessaires."
+    },
+    "w2": {
+      "alt": "Import-Export",
+      "title": "Export, import, transit et autres opérations douanières.",
+      "desc": "Nous avons mis en place des flux d'import/export dans toutes les conditions, pour tout type de produit, au sein et hors de l'UE."
+    },
+    "w3": {
+      "alt": "Inventaire",
+      "title": "Services d'inventaire livrés avec excellence.",
+      "desc": "Nous clarifions les stocks et autres actifs, que ce soit pour l'inventaire annuel ou dans les processus de liquidation."
+    }
+  },
+
+  "features": {
+    "title": "Pourquoi choisir Clarified",
+    "subtitle": "Nos capacités sont conçues pour propulser votre entreprise dans un environnement concurrentiel.",
+    "f1": {
+      "title": "Conseil Douanier Premium",
+      "desc": "Des consultants agréés vous aident à optimiser les coûts douaniers."
+    },
+    "f2": {
+      "title": "Gestion Opérationnelle-Logistique",
+      "desc": "Nous rationalisons les processus pour transformer l'efficacité en économies."
+    },
+    "f3": {
+      "title": "Inventaire & Mise à Disposition de Personnel",
+      "desc": "Des équipes dédiées pour des inventaires externalisés qui clarifient vos stocks."
+    },
+    "f4": {
+      "title": "Solutions IT Sur Mesure",
+      "desc": "Nous collaborons avec vous pour créer des solutions réellement efficaces."
+    }
+  },
+
+  "stats": {
+    "s1": "Projets Livrés",
+    "s2": "Processus Optimisés",
+    "s3": "Années d'Expérience",
+    "s4": "Clients Satisfaits",
+    "rightTitle": "Transformer la complexité en clarté, décision après décision.",
+    "rightBtn": "Nous contacter"
+  },
+
+  "footer": {
+    "cta": {
+      "title": "Besoin d'un conseil de haut niveau ?",
+      "btn": "Nous contacter"
+    },
+    "office": {
+      "title": "Siège RO",
+      "address": "Str. Oltului 3, Ap. 12, Buftea, Județul Ilfov\nEmail : office@clarified.ro\nTéléphone : +40774456127"
+    },
+    "links": {
+      "contact": "Nous contacter",
+      "privacy": "Politique de Confidentialité"
+    },
+    "credit": "© 2025 Clarified. Propulsé par Clarified Digital."
+  }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <link rel="stylesheet" href="https://unpkg.com/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://unpkg.com/cookieconsent@3/build/cookieconsent.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarified – Digital Growth Solutions</title>
+
+  <!-- Favicon & fonturi -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+
+  <!-- SEO & Open Graph -->
+  <meta name="description"
+        content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Clarified">
+  <meta property="og:title"       content="Clarified – Home">
+  <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
+  <meta property="og:url"         content="https://clarified.ro">
+  <meta property="og:image"       content="https://clarified.ro/img/Import%20Export.jpg">
+</head>
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#000" },
+      button: { background: "#f1d600" }
+    },
+    theme: "classic",
+    content: {
+      message: "Acest site folosește cookie‑uri pentru a îmbunătăți experiența.",
+      dismiss: "Am înțeles",
+      link: "Detalii GDPR",
+      href: "/politica-de-confidentialitate"
+    }
+  })
+});
+</script>
+  
+<body>
+  <!-- ==========  HEADER  ========== -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="contact-info">
+          <span>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:office@clarified.ro"
+               data-i18n="topbar.email">office@clarified.ro</a>
+          </span>
+          <span class="divider">|</span>
+          <span>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+40774456127"
+               data-i18n="topbar.phone1">+40774456127</a>
+          </span>
+          <span class="divider">|</span>
+          <span>
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+40751018695"
+               data-i18n="topbar.phone2">+40751018695</a>
+          </span>
+        </div>
+
+        <div class="location-info"
+             data-i18n="topbar.location">Bucharest, RO</div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-flex">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Clarified Logo">
+          <span class="brand-name" data-i18n="brand">Clarified</span>
+        </div>
+
+        <!-- ===== NAVBAR ===== -->
+        <nav class="nav-wrapper">
+          <div class="nav-left">
+            <ul class="nav-menu">
+              <li><a href="index.html"                 data-i18n="nav.home"></a></li>
+              <li><a href="#about"                     data-i18n="nav.about"></a></li>
+
+              <li class="dropdown">
+                <!-- buton dropdown -->
+                <a href="#" data-i18n="nav.services"></a>
+                <!-- meniul -->
+                <ul class="dropdown-menu">
+                  <li><a href="clarified-customs.html"         data-i18n="nav.customs"></a></li>
+                  <li><a href="clarified-ops-logistics.html"   data-i18n="nav.opslog"></a></li>
+                  <li><a href="clarified-it.html"              data-i18n="nav.it"></a></li>
+                </ul>
+              </li>
+
+              <li><a href="contact.html"              data-i18n="nav.contact"></a></li>
+            </ul>
+          </div>
+
+          <!-- Dreapta: selector limbă + cta -->
+          <div class="nav-right">
+            <!-- Selectare limbă (buton cu steag) -->
+            <div class="language-selector">
+  <button class="lang-btn" data-lang-switch="ro" aria-label="Română">
+    <img src="img/flags/ro.png" alt="Romanian">
+  </button>
+  <button class="lang-btn" data-lang-switch="en" aria-label="English">
+    <img src="img/flags/en.png" alt="English">
+  </button>
+  <button class="lang-btn" data-lang-switch="fr" aria-label="Français">
+    <img src="img/flags/fr.png" alt="French">
+  </button>
+  <button class="lang-btn" data-lang-switch="de" aria-label="Deutsch">
+    <img src="img/flags/de.png" alt="German">
+  </button>
+</div>
+
+            <div class="cta-button">
+              <a href="contact.html#contact"
+                 class="btn-primary"
+                 data-i18n="nav.cta"></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========  HERO  ========== -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h1 data-i18n="hero.headline"></h1>
+        <p  data-i18n="hero.subtitle"></p>
+        <a href="contact.html#contact"
+           class="btn-primary"
+           data-i18n="hero.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  SERVICES  ========== -->
+  <section class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="services.title"></h2>
+        <p  data-i18n="services.subtitle"></p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service #1 -->
+        <div class="service-item">
+          <i class="fas fa-lightbulb"></i>
+          <h3 data-i18n="services.s1.title"></h3>
+          <p  data-i18n="services.s1.desc"></p>
+          <a href="clarified-customs.html"
+             data-i18n="services.s1.link"></a>
+        </div>
+
+        <!-- Service #2 -->
+        <div class="service-item">
+          <i class="fas fa-rocket"></i>
+          <h3 data-i18n="services.s2.title"></h3>
+          <p  data-i18n="services.s2.desc"></p>
+          <a href="clarified-ops-logistics.html"
+             data-i18n="services.s2.link"></a>
+        </div>
+
+        <!-- Service #3 -->
+        <div class="service-item">
+          <i class="fas fa-chart-line"></i>
+          <h3 data-i18n="services.s3.title"></h3>
+          <p  data-i18n="services.s3.desc"></p>
+          <a href="clarified-ops-logistics.html"
+             data-i18n="services.s3.link"></a>
+        </div>
+
+        <!-- Service #4 -->
+        <div class="service-item">
+          <i class="fas fa-search"></i>
+          <h3 data-i18n="services.s4.title"></h3>
+          <p  data-i18n="services.s4.desc"></p>
+          <a href="clarified-it.html"
+             data-i18n="services.s4.link"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  ABOUT US  ========== -->
+  <section id="about" class="about-us">
+    <div class="container about-container">
+      <div class="about-left">
+        <h2 data-i18n="about.title"></h2>
+        <p  data-i18n="about.desc"></p>
+
+        <blockquote>
+          <span data-i18n="about.quote"></span>
+          <cite data-i18n="about.quoteAuthor"></cite>
+        </blockquote>
+
+        <a href="about.html"
+           class="btn-primary"
+           data-i18n="about.link"></a>
+      </div>
+
+      <div class="about-right">
+        <img src="img/Poza-site-prima-pagina.jpg"
+             data-i18n="[alt]about.imageAlt"
+             alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  RECENT WORKS  ========== -->
+  <section class="recent-works">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-i18n="works.title"></h2>
+        <p  data-i18n="works.subtitle"></p>
+      </div>
+
+      <div class="works-grid">
+        <!-- work‑item #1 -->
+        <div class="work-item">
+          <img src="img/Flux operational logisitc image.jpg"
+               data-i18n="[alt]works.w1.alt"
+               alt="">
+          <h3 data-i18n="works.w1.title"></h3>
+          <p  data-i18n="works.w1.desc1"></p>
+          <p  data-i18n="works.w1.desc2"></p>
+        </div>
+
+        <!-- work‑item #2 -->
+        <div class="work-item">
+          <img src="img/Import Export.jpg"
+               data-i18n="[alt]works.w2.alt"
+               alt="">
+          <h3 data-i18n="works.w2.title"></h3>
+          <p  data-i18n="works.w2.desc"></p>
+        </div>
+
+        <!-- work‑item #3 -->
+        <div class="work-item">
+          <img src="img/Inventar img.jpg"
+               data-i18n="[alt]works.w3.alt"
+               alt="">
+          <h3 data-i18n="works.w3.title"></h3>
+          <p  data-i18n="works.w3.desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========  FEATURES  ========== -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-i18n="features.title"></h2>
+          <p  data-i18n="features.subtitle"></p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-piggy-bank"></i>
+            <h3 data-i18n="features.f1.title"></h3>
+            <p  data-i18n="features.f1.desc"></p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fas fa-chart-pie"></i>
+            <h3 data-i18n="features.f2.title"></h3>
+            <p  data-i18n="features.f2.desc"></p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fas fa-paint-brush"></i>
+            <h3 data-i18n="features.f3.title"></h3>
+            <p  data-i18n="features.f3.desc"></p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <h3 data-i18n="features.f4.title"></h3>
+            <p  data-i18n="features.f4.desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ==========  STATS  ========== -->
+  <section id="home" class="stats">
+    <div class="container stats-container">
+      <div class="stats-left">
+        <div class="stat-box">
+          <h2 class="counter" data-target="150" data-suffix="+">0+</h2>
+          <p data-i18n="stats.s1"></p>
+        </div>
+
+        <div class="stat-box">
+          <h2 class="counter" data-target="80" data-suffix="+">0+</h2>
+          <p data-i18n="stats.s2"></p>
+        </div>
+
+        <div class="stat-box">
+          <h2 class="counter" data-target="15" data-suffix="+">0+</h2>
+          <p data-i18n="stats.s3"></p>
+        </div>
+
+        <div class="stat-box">
+          <h2 class="counter" data-target="100" data-suffix="%">0%</h2>
+          <p data-i18n="stats.s4"></p>
+        </div>
+      </div>
+
+      <div class="stats-right">
+        <h3 data-i18n="stats.rightTitle"></h3>
+        <a href="contact.html#contact"
+           class="btn-secondary"
+           data-i18n="stats.rightBtn"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  FOOTER  ========== -->
+  <footer class="site-footer">
+    <!-- CTA de sus -->
+    <div class="footer-top">
+      <div class="container footer-cta">
+        <div class="cta-text">
+          <h2 data-i18n="footer.cta.title"></h2>
+        </div>
+        <div>
+          <a href="contact.html#contact"
+             class="cta-btn"
+             data-i18n="footer.cta.btn"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Informaţii birou -->
+    <div class="footer-main">
+      <div class="container office-info">
+        <div class="office">
+          <h4 data-i18n="footer.office.title"></h4>
+          <p data-i18n="footer.office.address"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bara de jos -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <div class="footer-links">
+          <a href="contact.html#contact" data-i18n="footer.links.contact"></a>
+          <a href="#"                  data-i18n="footer.links.privacy"></a>
+        </div>
+        <p class="credit" data-i18n="footer.credit"></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========  SCRIPTURI  ========== -->
+  <script src="script/counter.js"></script>
+
+  <!-- i18next + backend + detector (CDN) -->
+  <script src="https://unpkg.com/i18next@22/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@1/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@7/i18nextBrowserLanguageDetector.min.js"></script>
+
+  <!-- logica de traducere – o vei crea la Pasul 3 -->
+  <script src="script/translate.js"></script>
+  <script src="script/scrollHide.js"></script>
+</body>
+</html>

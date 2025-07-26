@@ -1,0 +1,129 @@
+
+{
+  "brand": "Clarified",
+
+  "topbar": {
+    "email": "office@clarified.ro",
+    "phone1": "+40774456127",
+    "phone2": "+40751018695",
+    "location": "Bucharest, RO"
+  },
+
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "customs": "Clarified Customs",
+    "opslog": "Clarified Operations & Logistics",
+    "it": "Clarified IT",
+    "contact": "Contact",
+    "cta": "Request Consultation"
+  },
+
+  "hero": {
+    "headline": "Customs Consulting. Logistic Efficiency. Smart Digitalisation",
+    "subtitle": "Clarified offers tailored solutions for safe, scalable growth.",
+    "cta": "Talk to a Consultant"
+  },
+
+  "services": {
+    "title": "Our Expertise",
+    "subtitle": "Specialised services that help you excel in a digital world.",
+    "s1": {
+      "title": "Strategic Clarity in Customs Processes",
+      "desc": "We turn complex customs and operational procedures into scalable, practical strategies.",
+      "link": "Learn more"
+    },
+    "s2": {
+      "title": "Operational & Logistic Management",
+      "desc": "Accelerate your path to excellence through optimisation of transport, warehousing, inventory and more.",
+      "link": "Learn more"
+    },
+    "s3": {
+      "title": "Inventory Services",
+      "desc": "Use data analysis to make smart business decisions through our asset-inventory services.",
+      "link": "Learn more"
+    },
+    "s4": {
+      "title": "IT Made Simple",
+      "desc": "Transparent design and implementation of easy-to-understand IT solutions.",
+      "link": "Learn more"
+    }
+  },
+
+  "about": {
+    "title": "A vision that brings clarity and growth",
+    "desc": "At Clarified, we turn challenges into strategic structures through operational clarity and digital innovation. Our goal is to help modern companies navigate complexity and expand with confidence.",
+    "quote": "Clarity is not just a principle – it's our promise.",
+    "quoteAuthor": "— Cristian A., CEO of Clarified",
+    "link": "Learn more",
+    "imageAlt": "Clarified team meeting"
+  },
+
+  "works": {
+    "title": "Recent Work",
+    "subtitle": "Explore our latest projects across industries that drive transformation and impact.",
+    "w1": {
+      "alt": "Logistic operational flow",
+      "title": "Building the logistic operational flow for photovoltaic parks.",
+      "desc1": "We took full operational-logistics responsibility, including transport, customs formalities and project management for multimodal imports.",
+      "desc2": "We also manage transaction authorisations and register all flows in the RO e-Transport system for the technical components of several photovoltaic parks."
+    },
+    "w2": {
+      "alt": "Import-Export",
+      "title": "Export, import, transit and other customs operations.",
+      "desc": "We successfully operationalised import and export flows under any conditions, for any product category, both within and outside the EU."
+    },
+    "w3": {
+      "alt": "Inventory services",
+      "title": "Top-class inventory services.",
+      "desc": "We bring clarity to stock and other assets for annual inventory or during liquidation and dissolution processes."
+    }
+  },
+
+  "features": {
+    "title": "Why Choose Clarified",
+    "subtitle": "Our capabilities are designed to take your business to the next level in today’s competitive customs, operational and digital landscape.",
+    "f1": {
+      "title": "Premium Customs Consulting",
+      "desc": "Accredited consultants help you optimise customs costs."
+    },
+    "f2": {
+      "title": "Operational-Logistic Management",
+      "desc": "We streamline processes and flows so that efficiency translates into cost savings."
+    },
+    "f3": {
+      "title": "Inventory & Staff Leasing",
+      "desc": "Dedicated teams for outsourced inventory services that bring clarity to your stock."
+    },
+    "f4": {
+      "title": "Tailor-Made IT Solutions",
+      "desc": "We work with you to build solutions that truly work."
+    }
+  },
+
+  "stats": {
+    "s1": "Projects Delivered",
+    "s2": "Process Optimisations",
+    "s3": "Years of Experience",
+    "s4": "Happy Clients",
+    "rightTitle": "Turning complexity into clarity – one informed decision at a time.",
+    "rightBtn": "Contact us"
+  },
+
+  "footer": {
+    "cta": {
+      "title": "Need top-class consulting?",
+      "btn": "Contact us"
+    },
+    "office": {
+      "title": "HQ – Romania",
+      "address": "Str. Oltului 3, Ap. 12, Buftea, Ilfov County\nEmail: office@clarified.ro\nPhone: +40774456127"
+    },
+    "links": {
+      "contact": "Contact us",
+      "privacy": "Privacy Policy"
+    },
+    "credit": "© 2025 Clarified. Powered by Clarified Digital."
+  }
+}
