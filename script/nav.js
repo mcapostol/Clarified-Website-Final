@@ -1,29 +1,20 @@
-// script/nav.js
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle   = document.querySelector(".menu-toggle");   // buton hamburger
-  const mobileEl = document.getElementById("mobileMenu");    // nav mobil
+  const burger   = document.querySelector(".mobile-nav-toggle");
+  const dropdown = document.querySelector(".mobile-nav-dropdown");
 
-  if (toggle && mobileEl) {
-    toggle.addEventListener("click", () => {
-      mobileEl.classList.toggle("show"); // adaugă / scoate clasa .show
+  if (burger && dropdown) {
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      dropdown.classList.toggle("open");
     });
   }
 
-  // Schimbare limbă din meniul mobil
-  mobileEl?.querySelectorAll("[data-lang-switch]")?.forEach(btn => {
+  // language switch
+  dropdown.querySelectorAll("[data-lang-switch]").forEach(btn => {
     btn.addEventListener("click", e => {
       const lang = e.currentTarget.dataset.langSwitch;
-      window.localStorage.setItem("lang", lang);   // ex: ro / en / fr / de
-      location.reload();                           // reîncarcă cu noua limbă
+      localStorage.setItem("lang", lang);
+      location.reload();
     });
   });
 });
-<script>
-  const toggle   = document.querySelector('.mobile-nav-toggle');
-  const dropdown = document.querySelector('.mobile-nav-dropdown');
-
-  toggle.addEventListener('click', () => {
-     toggle.classList.toggle('active');
-     dropdown.classList.toggle('open');
-  });
-</script>
