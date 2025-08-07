@@ -1259,3 +1259,24 @@ button[type="submit"]:disabled {
 /* ===============================================
    Nothing on desktop changes – burger stays!
    =============================================== */
+/* ---------------------------------------------------
+   DESKTOP ONLY (≥992 px)
+--------------------------------------------------- */
+@media (min-width: 992px) {
+  /* arată meniul & steagurile */
+  .desktop-nav,
+  .desktop-lang           { display:flex; align-items:center; gap:1rem; }
+
+  /* ascunde burger + dropdown */
+  .mobile-nav-toggle,
+  .mobile-nav-dropdown     { display:none !important; }
+}
+
+/* ---------------------------------------------------
+   MOBIL / TABLET (<992 px)
+--------------------------------------------------- */
+@media (max-width: 991.98px){
+  /* ascunde complet versiunea desktop */
+  .desktop-nav,
+  .desktop-lang            { display:none !important; }
+}
