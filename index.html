@@ -46,92 +46,108 @@ window.addEventListener("load", function(){
   
 <body>
   <!-- ==========  HEADER  ========== -->
-  <header class="site-header">
-    <div class="header-top">
-      <div class="container">
-        <div class="contact-info">
-          <span>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:office@clarified.ro"
-               data-i18n="topbar.email">office@clarified.ro</a>
-          </span>
-          <span class="divider">|</span>
-          <span>
-            <i class="fas fa-phone-alt"></i>
-            <a href="tel:+40774456127"
-               data-i18n="topbar.phone1">+40774456127</a>
-          </span>
-          <span class="divider">|</span>
-          <span>
-            <i class="fas fa-phone-alt"></i>
-            <a href="tel:+40751018695"
-               data-i18n="topbar.phone2">+40751018695</a>
-          </span>
+<header class="site-header">
+  <!-- ───── Top bar (neschimbat) ───── -->
+  <div class="header-top">
+    <div class="container">
+      <div class="contact-info">
+        <span><i class="fas fa-envelope"></i>
+          <a href="mailto:office@clarified.ro" data-i18n="topbar.email">office@clarified.ro</a></span>
+        <span class="divider">|</span>
+        <span><i class="fas fa-phone-alt"></i>
+          <a href="tel:+40774456127" data-i18n="topbar.phone1">+40774456127</a></span>
+        <span class="divider">|</span>
+        <span><i class="fas fa-phone-alt"></i>
+          <a href="tel:+40751018695" data-i18n="topbar.phone2">+40751018695</a></span>
+      </div>
+
+      <div class="location-info" data-i18n="topbar.location">Bucharest, RO</div>
+    </div>
+  </div>
+
+  <!-- ───── Main bar ───── -->
+  <div class="header-main">
+    <div class="container header-flex">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="img/logo.png" alt="Clarified Logo">
+        <span class="brand-name" data-i18n="brand">Clarified</span>
+      </div>
+
+      <!-- ──────────────────────────────────────────────────────── -->
+      <!--  1)  Buton hamburger (vizibil numai ≤768 px)            -->
+      <!-- ──────────────────────────────────────────────────────── -->
+      <button class="menu-toggle" aria-label="Open menu">
+        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- ──────────────────────────────────────────────────────── -->
+      <!--  2)  Panou mobil (ascuns pe desktop)                    -->
+      <!-- ──────────────────────────────────────────────────────── -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html"               data-i18n="nav.home"></a>
+        <a href="#about"                   data-i18n="nav.about"></a>
+
+        <details>
+          <summary data-i18n="nav.services"></summary>
+          <a href="clarified-customs.html"       data-i18n="nav.customs"></a>
+          <a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a>
+          <a href="clarified-it.html"            data-i18n="nav.it"></a>
+        </details>
+
+        <a href="contact.html"            data-i18n="nav.contact"></a>
+
+        <!-- Languages într-un singur rând -->
+        <div class="mobile-langs">
+          <img src="img/flags/ro.png" alt="RO" data-lang-switch="ro">
+          <img src="img/flags/en.png" alt="EN" data-lang-switch="en">
+          <img src="img/flags/fr.png" alt="FR" data-lang-switch="fr">
+          <img src="img/flags/de.png" alt="DE" data-lang-switch="de">
+        </div>
+      </nav>
+
+      <!-- ──────────────────────────────────────────────────────── -->
+      <!--  3)  Navbar original (vizibil desktop, ascuns pe mobil) -->
+      <!-- ──────────────────────────────────────────────────────── -->
+      <nav class="nav-wrapper">
+        <div class="nav-left">
+          <ul class="nav-menu">
+            <li><a href="index.html"               data-i18n="nav.home"></a></li>
+            <li><a href="#about"                   data-i18n="nav.about"></a></li>
+
+            <li class="dropdown">
+              <a href="#" data-i18n="nav.services"></a>
+              <ul class="dropdown-menu">
+                <li><a href="clarified-customs.html"       data-i18n="nav.customs"></a></li>
+                <li><a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a></li>
+                <li><a href="clarified-it.html"            data-i18n="nav.it"></a></li>
+              </ul>
+            </li>
+
+            <li><a href="contact.html"            data-i18n="nav.contact"></a></li>
+          </ul>
         </div>
 
-        <div class="location-info"
-             data-i18n="topbar.location">Bucharest, RO</div>
-      </div>
-    </div>
+        <!-- Dreapta: steaguri + CTA (desktop only) -->
+        <div class="nav-right">
+          <div class="language-selector">
+            <button class="lang-btn" data-lang-switch="ro"><img src="img/flags/ro.png" alt="Romanian"></button>
+            <button class="lang-btn" data-lang-switch="en"><img src="img/flags/en.png" alt="English"></button>
+            <button class="lang-btn" data-lang-switch="fr"><img src="img/flags/fr.png" alt="French"></button>
+            <button class="lang-btn" data-lang-switch="de"><img src="img/flags/de.png" alt="German"></button>
+          </div>
 
-    <div class="header-main">
-      <div class="container header-flex">
-        <!-- Logo -->
-        <div class="logo">
-          <img src="img/logo.png" alt="Clarified Logo">
-          <span class="brand-name" data-i18n="brand">Clarified</span>
+          <div class="cta-button">
+            <a href="contact.html#contact" class="btn-primary" data-i18n="nav.cta"></a>
+          </div>
         </div>
-
-        <!-- ===== NAVBAR ===== -->
-        <nav class="nav-wrapper">
-          <div class="nav-left">
-            <ul class="nav-menu">
-              <li><a href="index.html"                 data-i18n="nav.home"></a></li>
-              <li><a href="#about"                     data-i18n="nav.about"></a></li>
-
-              <li class="dropdown">
-                <!-- buton dropdown -->
-                <a href="#" data-i18n="nav.services"></a>
-                <!-- meniul -->
-                <ul class="dropdown-menu">
-                  <li><a href="clarified-customs.html"         data-i18n="nav.customs"></a></li>
-                  <li><a href="clarified-ops-logistics.html"   data-i18n="nav.opslog"></a></li>
-                  <li><a href="clarified-it.html"              data-i18n="nav.it"></a></li>
-                </ul>
-              </li>
-
-              <li><a href="contact.html"              data-i18n="nav.contact"></a></li>
-            </ul>
-          </div>
-
-          <!-- Dreapta: selector limbă + cta -->
-          <div class="nav-right">
-            <!-- Selectare limbă (buton cu steag) -->
-            <div class="language-selector">
-  <button class="lang-btn" data-lang-switch="ro" aria-label="Română">
-    <img src="img/flags/ro.png" alt="Romanian">
-  </button>
-  <button class="lang-btn" data-lang-switch="en" aria-label="English">
-    <img src="img/flags/en.png" alt="English">
-  </button>
-  <button class="lang-btn" data-lang-switch="fr" aria-label="Français">
-    <img src="img/flags/fr.png" alt="French">
-  </button>
-  <button class="lang-btn" data-lang-switch="de" aria-label="Deutsch">
-    <img src="img/flags/de.png" alt="German">
-  </button>
-</div>
-
-            <div class="cta-button">
-              <a href="contact.html#contact"
-                 class="btn-primary"
-                 data-i18n="nav.cta"></a>
-            </div>
-          </div>
-        </nav>
-      </div>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- ==========  HERO  ========== -->
   <section class="hero">
