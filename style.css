@@ -1259,17 +1259,3 @@ button[type="submit"]:disabled {
 /* ===============================================
    Nothing on desktop changes – burger stays!
    =============================================== */
-/* ==== Desktop fine-tuning (spacer între steaguri & CTA) ================ */
-@media (min-width: 992px) {
-
-  /* dacă încă nu este flex pe desktop, îl păstrăm ca fallback */
-  .nav-right{
-    display:flex;
-    align-items:center;
-  }
-
-  /* steaguri OK – doar împingem butonul spre dreapta */
-  .nav-right .cta-button{
-    margin-left:1.5rem;      /* mută-l după gust: 1-3rem */
-  }
-}
