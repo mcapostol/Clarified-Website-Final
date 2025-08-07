@@ -1146,3 +1146,34 @@ button[type="submit"]:disabled {
   box-shadow:0 0 0 2px #ff0033;   /* culoarea brandului */
   transform:none;
 }
+/* ==== Mobile nav ( ≤768 px ) ==== */
+@media (max-width: 768px) {
+  /* Hide the big list + flags */
+  .top-nav, .flag-bar { display: none; }
+
+  /* Compact header */
+  header { position: sticky; top: 0; z-index: 1000; }
+
+  /* Hamburger button (visible only mobile) */
+  .menu-toggle {
+    display: inline-flex;             /* > show */
+    align-items: center;
+    padding: .5rem 1rem;
+    background: none;
+    border: 0;
+  }
+
+  /* Slide-down panel */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,.1);
+  }
+  .mobile-menu.show { display: flex; }
+
+  /* Language flags inside one row */
+  .mobile-langs img { width: 28px; }
+}
