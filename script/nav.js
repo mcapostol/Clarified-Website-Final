@@ -18,3 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+<script>
+  const toggle   = document.querySelector('.mobile-nav-toggle');
+  const dropdown = document.querySelector('.mobile-nav-dropdown');
+
+  toggle.addEventListener('click', () => {
+     toggle.classList.toggle('active');
+     dropdown.classList.toggle('open');
+  });
+</script>
