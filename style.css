@@ -1199,3 +1199,25 @@ button[type="submit"]:disabled {
     display: none !important;
   }
 }
+/* === ascunde meniul clasic pe ecrane < 992 px === */
+@media (max-width: 991.98px) {
+  .nav-wrapper .nav-left,
+  .nav-wrapper .nav-right {
+    display: none;
+  }
+}
+
+/* === arată doar butonul hamburger pe mobil === */
+@media (max-width: 991.98px) {
+  .mobile-nav-toggle {       /* butonul albastru cu 3 linii */
+    display: block;
+  }
+}
+
+/* === pe desktop inversăm: ascundem hamburgerul === */
+@media (min-width: 992px) {
+  .mobile-nav-toggle,
+  .mobile-nav-dropdown {
+    display: none !important;
+  }
+}
