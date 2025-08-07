@@ -1,159 +1,91 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <link rel="stylesheet" href="https://unpkg.com/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://unpkg.com/cookieconsent@3/build/cookieconsent.min.js"></script>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clarified – Digital Growth Solutions</title>
 
-  <!-- Favicon & fonturi -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="mask-icon" href="/favicon.svg" color="#00b4d8">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
+  <!-- Favicon, fonturi, CSS -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="mask-icon" href="/favicon.svg" color="#00b4d8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- SEO & Open Graph -->
-  <meta name="description"
-        content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified.">
-  <meta property="og:type"        content="website">
-  <meta property="og:site_name"   content="Clarified">
-  <meta property="og:title"       content="Clarified – Home">
-  <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri.">
-  <meta property="og:url"         content="https://clarified.ro">
-  <meta property="og:image"       content="https://clarified.ro/img/Import%20Export.jpg">
+  <!-- SEO & OG -->
+  <meta name="description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri – Clarified." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Clarified" />
+  <meta property="og:title"       content="Clarified – Home" />
+  <meta property="og:description" content="Servicii de vamă, logistică operațională și digitalizare pentru afaceri." />
+  <meta property="og:url"         content="https://clarified.ro" />
+  <meta property="og:image"       content="https://clarified.ro/img/Import%20Export.jpg" />
 </head>
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { background: "#000" },
-      button: { background: "#f1d600" }
-    },
-    theme: "classic",
-    content: {
-      message: "Acest site folosește cookie‑uri pentru a îmbunătăți experiența.",
-      dismiss: "Am înțeles",
-      link: "Detalii GDPR",
-      href: "/politica-de-confidentialitate"
-    }
-  })
-});
-</script>
-  <!-- înainte de </body> -->
-<script src="script/nav.js"></script>
+
 <body>
   <!-- ==========  HEADER  ========== -->
-<header class="site-header">
-  <!-- ───── Top bar (neschimbat) ───── -->
-  <div class="header-top">
-    <div class="container">
-      <div class="contact-info">
-        <span><i class="fas fa-envelope"></i>
-          <a href="mailto:office@clarified.ro" data-i18n="topbar.email">office@clarified.ro</a></span>
-        <span class="divider">|</span>
-        <span><i class="fas fa-phone-alt"></i>
-          <a href="tel:+40774456127" data-i18n="topbar.phone1">+40774456127</a></span>
-        <span class="divider">|</span>
-        <span><i class="fas fa-phone-alt"></i>
-          <a href="tel:+40751018695" data-i18n="topbar.phone2">+40751018695</a></span>
-      </div>
-
-      <div class="location-info" data-i18n="topbar.location">Bucharest, RO</div>
-    </div>
-  </div>
-
-  <!-- ───── Main bar ───── -->
-  <div class="header-main">
-    <div class="container header-flex">
-      <!-- Logo -->
-      <div class="logo">
-        <img src="img/logo.png" alt="Clarified Logo">
-        <span class="brand-name" data-i18n="brand">Clarified</span>
-      </div>
-
-      <!-- ──────────────────────────────────────────────────────── -->
-      <!--  1)  Buton hamburger (vizibil numai ≤768 px)            -->
-      <!-- ──────────────────────────────────────────────────────── -->
-      <button class="menu-toggle" aria-label="Open menu">
-        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-
-      <!-- ──────────────────────────────────────────────────────── -->
-      <!--  2)  Panou mobil (ascuns pe desktop)                    -->
-      <!-- ──────────────────────────────────────────────────────── -->
-      <nav class="mobile-menu" id="mobileMenu">
-        <a href="index.html"               data-i18n="nav.home"></a>
-        <a href="#about"                   data-i18n="nav.about"></a>
-
-        <details>
-          <summary data-i18n="nav.services"></summary>
-          <a href="clarified-customs.html"       data-i18n="nav.customs"></a>
-          <a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a>
-          <a href="clarified-it.html"            data-i18n="nav.it"></a>
-        </details>
-
-        <a href="contact.html"            data-i18n="nav.contact"></a>
-
-        <!-- Languages într-un singur rând -->
-        <div class="mobile-langs">
-          <img src="img/flags/ro.png" alt="RO" data-lang-switch="ro">
-          <img src="img/flags/en.png" alt="EN" data-lang-switch="en">
-          <img src="img/flags/fr.png" alt="FR" data-lang-switch="fr">
-          <img src="img/flags/de.png" alt="DE" data-lang-switch="de">
+  <header class="site-header">
+    <!-- top bar -->
+    <div class="header-top">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-envelope"></i><a href="mailto:office@clarified.ro" data-i18n="topbar.email">office@clarified.ro</a></span>
+          <span class="divider">|</span>
+          <span><i class="fas fa-phone-alt"></i><a href="tel:+40774456127" data-i18n="topbar.phone1">+40774456127</a></span>
+          <span class="divider">|</span>
+          <span><i class="fas fa-phone-alt"></i><a href="tel:+40751018695" data-i18n="topbar.phone2">+40751018695</a></span>
         </div>
-      </nav>
-
-      <!-- ──────────────────────────────────────────────────────── -->
-      <!--  3)  Navbar original (vizibil desktop, ascuns pe mobil) -->
-      <!-- ──────────────────────────────────────────────────────── -->
-      <nav class="nav-wrapper">
-  <!-- 1) Hamburger button -->
-  <button class="mobile-nav-toggle" aria-label="Open main menu">
-    <span class="burger"></span>
-  </button>
-
-  <!-- 2) Dropdown that contains: pages + flags + CTA -->
-  <div class="mobile-nav-dropdown">
-    <ul class="nav-menu">
-      <li><a href="index.html"               data-i18n="nav.home"></a></li>
-      <li><a href="#about"                   data-i18n="nav.about"></a></li>
-
-      <li class="dropdown">
-        <a href="#" data-i18n="nav.services"></a>
-        <ul class="dropdown-menu">
-          <li><a href="clarified-customs.html"       data-i18n="nav.customs"></a></li>
-          <li><a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a></li>
-          <li><a href="clarified-it.html"            data-i18n="nav.it"></a></li>
-        </ul>
-      </li>
-
-      <li><a href="contact.html"            data-i18n="nav.contact"></a></li>
-    </ul>
-
-    <!-- compact language flags -->
-    <div class="language-selector">
-      <button class="lang-btn" data-lang-switch="ro" aria-label="Română"><img src="img/flags/ro.png" alt="RO"></button>
-      <button class="lang-btn" data-lang-switch="en" aria-label="Eng"><img src="img/flags/en.png" alt="EN"></button>
-      <button class="lang-btn" data-lang-switch="fr" aria-label="Français"><img src="img/flags/fr.png" alt="FR"></button>
-      <button class="lang-btn" data-lang-switch="de" aria-label="Deutsch"><img src="img/flags/de.png" alt="DE"></button>
+        <div class="location-info" data-i18n="topbar.location">Bucharest, RO</div>
+      </div>
     </div>
 
-    <!-- CTA -->
-    <div class="cta-button">
-      <a href="contact.html#contact" class="btn-primary" data-i18n="nav.cta"></a>
+    <!-- main bar -->
+    <div class="header-main">
+      <div class="container header-flex">
+        <!-- logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Clarified Logo" />
+          <span class="brand-name" data-i18n="brand">Clarified</span>
+        </div>
+
+        <!--  hamburger (toate width-urile)  -->
+        <button class="mobile-nav-toggle" aria-label="Open main menu">
+          <span class="burger"></span>
+        </button>
+
+        <!--  dropdown ce conţine meniul + steaguri + CTA  -->
+        <div class="mobile-nav-dropdown">
+          <ul class="nav-menu">
+            <li><a href="index.html" data-i18n="nav.home"></a></li>
+            <li><a href="#about" data-i18n="nav.about"></a></li>
+
+            <li class="dropdown">
+              <a href="#" data-i18n="nav.services"></a>
+              <ul class="dropdown-menu">
+                <li><a href="clarified-customs.html"       data-i18n="nav.customs"></a></li>
+                <li><a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a></li>
+                <li><a href="clarified-it.html"            data-i18n="nav.it"></a></li>
+              </ul>
+            </li>
+
+            <li><a href="contact.html" data-i18n="nav.contact"></a></li>
+          </ul>
+
+          <!-- steaguri compacte -->
+          <div class="language-selector">
+            <button class="lang-btn" data-lang-switch="ro" aria-label="Română"><img src="img/flags/ro.png" alt="RO" /></button>
+            <button class="lang-btn" data-lang-switch="en" aria-label="English"><img src="img/flags/en.png" alt="EN" /></button>
+            <button class="lang-btn" data-lang-switch="fr" aria-label="Français"><img src="img/flags/fr.png" alt="FR" /></button>
+            <button class="lang-btn" data-lang-switch="de" aria-label="Deutsch"><img src="img/flags/de.png" alt="DE" /></button>
+          </div>
+
+          <div class="cta-button">
+            <a href="contact.html#contact" class="btn-primary" data-i18n="nav.cta"></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-    </div>
-  </div>
-</header>
+  </header>
 
   <!-- ==========  HERO  ========== -->
   <section class="hero">
@@ -390,12 +322,17 @@ window.addEventListener("load", function(){
   </footer>
 
   <!-- ==========  SCRIPTURI  ========== -->
+  <script src="script/nav.js"></script>
   <script src="script/counter.js"></script>
 
-  <!-- i18next + backend + detector (CDN) -->
+  <!-- i18next + backend + detector -->
   <script src="https://unpkg.com/i18next@22/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@1/i18nextHttpBackend.min.js"></script>
   <script src="https://unpkg.com/i18next-browser-languagedetector@7/i18nextBrowserLanguageDetector.min.js"></script>
+  <script src="script/translate.js"></script>
+  <script src="script/scrollHide.js"></script>
+</body>
+</html>
 
   <!-- logica de traducere – o vei crea la Pasul 3 -->
   <script src="script/translate.js"></script>
