@@ -114,38 +114,43 @@ window.addEventListener("load", function(){
       <!--  3)  Navbar original (vizibil desktop, ascuns pe mobil) -->
       <!-- ──────────────────────────────────────────────────────── -->
       <nav class="nav-wrapper">
-        <div class="nav-left">
-          <ul class="nav-menu">
-            <li><a href="index.html"               data-i18n="nav.home"></a></li>
-            <li><a href="#about"                   data-i18n="nav.about"></a></li>
+  <!-- 1) Hamburger button -->
+  <button class="mobile-nav-toggle" aria-label="Open main menu">
+    <span class="burger"></span>
+  </button>
 
-            <li class="dropdown">
-              <a href="#" data-i18n="nav.services"></a>
-              <ul class="dropdown-menu">
-                <li><a href="clarified-customs.html"       data-i18n="nav.customs"></a></li>
-                <li><a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a></li>
-                <li><a href="clarified-it.html"            data-i18n="nav.it"></a></li>
-              </ul>
-            </li>
+  <!-- 2) Dropdown that contains: pages + flags + CTA -->
+  <div class="mobile-nav-dropdown">
+    <ul class="nav-menu">
+      <li><a href="index.html"               data-i18n="nav.home"></a></li>
+      <li><a href="#about"                   data-i18n="nav.about"></a></li>
 
-            <li><a href="contact.html"            data-i18n="nav.contact"></a></li>
-          </ul>
-        </div>
+      <li class="dropdown">
+        <a href="#" data-i18n="nav.services"></a>
+        <ul class="dropdown-menu">
+          <li><a href="clarified-customs.html"       data-i18n="nav.customs"></a></li>
+          <li><a href="clarified-ops-logistics.html" data-i18n="nav.opslog"></a></li>
+          <li><a href="clarified-it.html"            data-i18n="nav.it"></a></li>
+        </ul>
+      </li>
 
-        <!-- Dreapta: steaguri + CTA (desktop only) -->
-        <div class="nav-right">
-          <div class="language-selector">
-            <button class="lang-btn" data-lang-switch="ro"><img src="img/flags/ro.png" alt="Romanian"></button>
-            <button class="lang-btn" data-lang-switch="en"><img src="img/flags/en.png" alt="English"></button>
-            <button class="lang-btn" data-lang-switch="fr"><img src="img/flags/fr.png" alt="French"></button>
-            <button class="lang-btn" data-lang-switch="de"><img src="img/flags/de.png" alt="German"></button>
-          </div>
+      <li><a href="contact.html"            data-i18n="nav.contact"></a></li>
+    </ul>
 
-          <div class="cta-button">
-            <a href="contact.html#contact" class="btn-primary" data-i18n="nav.cta"></a>
-          </div>
-        </div>
-      </nav>
+    <!-- compact language flags -->
+    <div class="language-selector">
+      <button class="lang-btn" data-lang-switch="ro" aria-label="Română"><img src="img/flags/ro.png" alt="RO"></button>
+      <button class="lang-btn" data-lang-switch="en" aria-label="Eng"><img src="img/flags/en.png" alt="EN"></button>
+      <button class="lang-btn" data-lang-switch="fr" aria-label="Français"><img src="img/flags/fr.png" alt="FR"></button>
+      <button class="lang-btn" data-lang-switch="de" aria-label="Deutsch"><img src="img/flags/de.png" alt="DE"></button>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-button">
+      <a href="contact.html#contact" class="btn-primary" data-i18n="nav.cta"></a>
+    </div>
+  </div>
+</nav>
     </div>
   </div>
 </header>
