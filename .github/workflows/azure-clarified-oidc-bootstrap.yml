@@ -1,0 +1,245 @@
+name: Bootstrap CLARIFIED EU TCP Azure OIDC
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: clarified-eu-tcp-azure-oidc-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  bootstrap_clarified_oidc:
+    name: Bootstrap locked CLARIFIED deployment identity
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AZURE_CORE_OUTPUT: none
+      EXPECTED_AZURE_CLOUD: AzureCloud
+      EXPECTED_AZURE_TENANT_ID: 4d03141f-9141-42e3-a03e-f823c4bbb29d
+      EXPECTED_AZURE_SUBSCRIPTION_ID: bfed8e7d-30e2-463a-a639-24dc64977dbd
+      EXPECTED_AZURE_SUBSCRIPTION_NAME: Clarified Main Subscription
+      TARGET_RESOURCE_GROUP: rg-clarified-eu-tcp-prod-weu
+      TARGET_LOCATION: westeurope
+      DEPLOYMENT_NAME: deploy-clarified-eu-tcp-prod-oidc
+      MANAGED_IDENTITY_NAME: id-clarified-eu-tcp-prod-github
+      FEDERATED_CREDENTIAL_NAME: fic-clarified-eu-tcp-prod-github-environment
+      FEDERATED_SUBJECT: repo:mcapostol/clarified-trade-compliance-demo:environment:azure-production
+      CONTRIBUTOR_ROLE_DEFINITION_ID: b24988ac-6180-42a0-ab88-20f7382dd24c
+      RBAC_ADMINISTRATOR_ROLE_DEFINITION_ID: f58310d9-a9f6-439a-9e8d-f62e7b41a168
+    steps:
+      - name: Checkout the pinned bootstrap source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Authenticate with the existing repository credential
+        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          environment: azurecloud
+          allow-no-subscriptions: false
+
+      - name: Fail closed unless the active context is CLARIFIED
+        id: clarified_context_guard
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          IFS=$'\t' read -r actual_tenant_id actual_subscription_id actual_subscription_state actual_cloud_name actual_subscription_name < <(
+            az account show --only-show-errors \
+              --query '[tenantId,id,state,environmentName,name]' \
+              --output tsv
+          )
+
+          if [[ -z "$actual_tenant_id" || -z "$actual_subscription_id" ]]; then
+            echo "::error::Azure account context is unavailable."
+            exit 70
+          fi
+          if [[ "$actual_tenant_id" != "$EXPECTED_AZURE_TENANT_ID" ]]; then
+            echo "::error::Azure tenant mismatch; refusing every cloud mutation."
+            exit 71
+          fi
+          if [[ "$actual_subscription_id" != "$EXPECTED_AZURE_SUBSCRIPTION_ID" ]]; then
+            echo "::error::Azure subscription mismatch; refusing every cloud mutation."
+            exit 72
+          fi
+          if [[ "$actual_subscription_name" != "$EXPECTED_AZURE_SUBSCRIPTION_NAME" ]]; then
+            echo "::error::Azure subscription display name mismatch; refusing every cloud mutation."
+            exit 73
+          fi
+          if [[ "$actual_subscription_state" != "Enabled" || "$actual_cloud_name" != "$EXPECTED_AZURE_CLOUD" ]]; then
+            echo "::error::The locked CLARIFIED Azure context is not enabled in AzureCloud."
+            exit 74
+          fi
+
+          forbidden_name_pattern='(^|[-_])(pkf|shared|common)([-_]|$)'
+          for locked_name in \
+            "$TARGET_RESOURCE_GROUP" \
+            "$DEPLOYMENT_NAME" \
+            "$MANAGED_IDENTITY_NAME" \
+            "$FEDERATED_CREDENTIAL_NAME"; do
+            if [[ "${locked_name,,}" =~ $forbidden_name_pattern ]]; then
+              echo "::error::A locked production resource name contains a forbidden PKF/shared marker."
+              exit 75
+            fi
+          done
+
+          expected_context_fingerprint="$(printf '%s' \
+            "$EXPECTED_AZURE_TENANT_ID:$EXPECTED_AZURE_SUBSCRIPTION_ID:$EXPECTED_AZURE_SUBSCRIPTION_NAME" \
+            | sha256sum | cut -d' ' -f1)"
+          printf '%s\n' "$expected_context_fingerprint" > .clarified-azure-context.guard
+          chmod 600 .clarified-azure-context.guard
+          echo "CLARIFIED tenant/subscription guard: PASS" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create the dedicated resource group and OIDC identity
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          expected_context_fingerprint="$(printf '%s' \
+            "$EXPECTED_AZURE_TENANT_ID:$EXPECTED_AZURE_SUBSCRIPTION_ID:$EXPECTED_AZURE_SUBSCRIPTION_NAME" \
+            | sha256sum | cut -d' ' -f1)"
+          guarded_context_fingerprint="$(sed -n '1p' .clarified-azure-context.guard)"
+          if [[ -z "$guarded_context_fingerprint" || "$guarded_context_fingerprint" != "$expected_context_fingerprint" ]]; then
+            echo "::error::The CLARIFIED Azure context guard is missing or invalid."
+            exit 76
+          fi
+
+          IFS=$'\t' read -r active_tenant_id active_subscription_id active_subscription_name < <(
+            az account show --only-show-errors --query '[tenantId,id,name]' --output tsv
+          )
+          if [[ "$active_tenant_id" != "$EXPECTED_AZURE_TENANT_ID" \
+            || "$active_subscription_id" != "$EXPECTED_AZURE_SUBSCRIPTION_ID" \
+            || "$active_subscription_name" != "$EXPECTED_AZURE_SUBSCRIPTION_NAME" ]]; then
+            echo "::error::Azure context changed after the CLARIFIED guard; refusing every mutation."
+            exit 77
+          fi
+
+          az group create \
+            --name "$TARGET_RESOURCE_GROUP" \
+            --location "$TARGET_LOCATION" \
+            --tags company=clarified product=eu-tcp environment=production managed-by=github-actions \
+            --only-show-errors \
+            --output none
+
+          actual_resource_group_location="$(az group show \
+            --name "$TARGET_RESOURCE_GROUP" \
+            --only-show-errors \
+            --query location \
+            --output tsv)"
+          if [[ "${actual_resource_group_location,,}" != "$TARGET_LOCATION" ]]; then
+            echo "::error::The dedicated resource group exists in an unexpected Azure region."
+            exit 78
+          fi
+
+          az deployment group create \
+            --name "$DEPLOYMENT_NAME" \
+            --resource-group "$TARGET_RESOURCE_GROUP" \
+            --template-file infrastructure/azure/bootstrap/clarified-eu-tcp-oidc.bicep \
+            --parameters \
+              managedIdentityName="$MANAGED_IDENTITY_NAME" \
+              federatedCredentialName="$FEDERATED_CREDENTIAL_NAME" \
+              federatedSubject="$FEDERATED_SUBJECT" \
+              location="$TARGET_LOCATION" \
+            --only-show-errors \
+            --output none
+
+      - name: Verify the bounded bootstrap and create checksum-only evidence
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          IFS=$'\t' read -r client_id principal_id identity_resource_id < <(
+            az identity show \
+              --resource-group "$TARGET_RESOURCE_GROUP" \
+              --name "$MANAGED_IDENTITY_NAME" \
+              --only-show-errors \
+              --query '[clientId,principalId,id]' \
+              --output tsv
+          )
+          if [[ -z "$client_id" || -z "$principal_id" || -z "$identity_resource_id" ]]; then
+            echo "::error::The deployment identity is incomplete."
+            exit 79
+          fi
+
+          IFS=$'\t' read -r actual_issuer actual_subject actual_audience actual_audience_count < <(
+            az identity federated-credential show \
+              --resource-group "$TARGET_RESOURCE_GROUP" \
+              --identity-name "$MANAGED_IDENTITY_NAME" \
+              --name "$FEDERATED_CREDENTIAL_NAME" \
+              --only-show-errors \
+              --query '[issuer,subject,audiences[0],length(audiences)]' \
+              --output tsv
+          )
+          if [[ "$actual_issuer" != "https://token.actions.githubusercontent.com" \
+            || "$actual_subject" != "$FEDERATED_SUBJECT" \
+            || "$actual_audience" != "api://AzureADTokenExchange" \
+            || "$actual_audience_count" != "1" ]]; then
+            echo "::error::The GitHub federated credential does not match the locked contract."
+            exit 80
+          fi
+
+          resource_group_id="/subscriptions/$EXPECTED_AZURE_SUBSCRIPTION_ID/resourceGroups/$TARGET_RESOURCE_GROUP"
+          for role_definition_id in \
+            "$CONTRIBUTOR_ROLE_DEFINITION_ID" \
+            "$RBAC_ADMINISTRATOR_ROLE_DEFINITION_ID"; do
+            role_assignment_count="$(az role assignment list \
+              --assignee "$principal_id" \
+              --scope "$resource_group_id" \
+              --only-show-errors \
+              --query "[?roleDefinitionId=='/subscriptions/$EXPECTED_AZURE_SUBSCRIPTION_ID/providers/Microsoft.Authorization/roleDefinitions/$role_definition_id'] | length(@)" \
+              --output tsv)"
+            if [[ "$role_assignment_count" != "1" ]]; then
+              echo "::error::A required resource-group-scoped deployment role is missing or duplicated."
+              exit 81
+            fi
+          done
+
+          CLIENT_ID="$client_id" \
+          IDENTITY_RESOURCE_ID="$identity_resource_id" \
+          FEDERATED_SUBJECT_VALUE="$actual_subject" \
+          node <<'NODE'
+          const crypto = require("node:crypto");
+          const fs = require("node:fs");
+
+          const sha256 = (value) => crypto.createHash("sha256").update(value, "utf8").digest("hex");
+          const evidence = {
+            contract_version: "clarified.azure-oidc-bootstrap.v1",
+            result: "PASS",
+            cloud: process.env.EXPECTED_AZURE_CLOUD,
+            tenant_id_sha256: sha256(process.env.EXPECTED_AZURE_TENANT_ID),
+            subscription_id_sha256: sha256(process.env.EXPECTED_AZURE_SUBSCRIPTION_ID),
+            resource_group_name: process.env.TARGET_RESOURCE_GROUP,
+            location: process.env.TARGET_LOCATION,
+            managed_identity_name: process.env.MANAGED_IDENTITY_NAME,
+            managed_identity_client_id: process.env.CLIENT_ID,
+            managed_identity_resource_id: process.env.IDENTITY_RESOURCE_ID,
+            client_id_sha256: sha256(process.env.CLIENT_ID),
+            identity_resource_id_sha256: sha256(process.env.IDENTITY_RESOURCE_ID),
+            federated_subject_sha256: sha256(process.env.FEDERATED_SUBJECT_VALUE),
+            role_definition_ids: [
+              process.env.CONTRIBUTOR_ROLE_DEFINITION_ID,
+              process.env.RBAC_ADMINISTRATOR_ROLE_DEFINITION_ID
+            ],
+            role_scope: "resource-group-only",
+            source_revision: process.env.GITHUB_SHA,
+            credential_material_emitted: false
+          };
+
+          fs.writeFileSync(
+            "clarified-azure-oidc-bootstrap.json",
+            `${JSON.stringify(evidence, null, 2)}\n`,
+            { mode: 0o600 }
+          );
+          NODE
+
+          echo "CLARIFIED Azure OIDC bootstrap: PASS" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Retain checksum-only bootstrap evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: clarified-azure-oidc-bootstrap-${{ github.run_id }}
+          path: clarified-azure-oidc-bootstrap.json
+          if-no-files-found: error
+          retention-days: 7
